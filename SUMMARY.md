@@ -3,6 +3,6 @@
 * [Introduction](README.md)
 * [Decorators](Decorators.md)
 * [Middleware](Middleware/README.md)
-    * [UserAgent Detect](UserAgentDetect.md)
-    * [Url Parse](UrlParse.md)
+    * [UserAgent Detect](Middleware/UserAgentDetect.md)
+    * [Url Parse](Middleware/UrlParse.md)
 
