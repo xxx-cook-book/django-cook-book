@@ -1,3 +1,3 @@
-# First Chapter
+# Django Decorator of Logging Request Params
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+* Open Source Projects: [https://github.com/Brightcells/django-logit](https://github.com/Brightcells/django-logit)
