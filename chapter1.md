@@ -1,7 +1,7 @@
 # Decorators
 
 ## Logging Request Params
-* Open Source Projects: [https://github.com/Brightcells/django-logit](https://github.com/Brightcells/django-logit)
+* Open Source Project: [https://github.com/Brightcells/django-logit](https://github.com/Brightcells/django-logit)
 * Installation
 ```
   pip install django-logit
