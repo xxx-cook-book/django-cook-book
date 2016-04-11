@@ -10,6 +10,3 @@
         request.protocol = 'https' if request.is_secure() else 'http'
         return None
 ```
-  ​
-
-  ​
