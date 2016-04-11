@@ -45,3 +45,4 @@ LOGGING = {
     },
 }
 ```
+* Then the logs will be stored in logfile /tmp/logit.log
