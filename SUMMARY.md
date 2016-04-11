@@ -1,6 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Decorators](chapter1.md)
-* [Middleware](chapter2.md)
+* [Decorators](Decorators.md)
+* [Middleware](Middleware/README.md)
+    * [UserAgent Detect](UserAgentDetect.md)
+    * [Url Parse](UrlParse.md)
 

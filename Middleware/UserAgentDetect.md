@@ -1,7 +1,6 @@
-# Middleware
+# UserAgent Detect
 
-## UserAgent Detect
-### django-mobi
+## django-mobi
 
 * Open Source Project: [https://bitbucket.org/kencochrane/django-mobi/](https://bitbucket.org/kencochrane/django-mobi/)
 * Installation
