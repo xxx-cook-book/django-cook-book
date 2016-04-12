@@ -1,6 +1,5 @@
-# Decorators
+# Logging Request Params
 
-## Logging Request Params
 * Open Source Project: [https://github.com/Brightcells/django-logit](https://github.com/Brightcells/django-logit)
 * Installation
 ```
@@ -46,3 +45,15 @@ LOGGING = {
 }
 ```
 * Then the logs will be stored in logfile /tmp/logit.log
+* Advantage
+  Using logit decorator is a shortcut for below:
+```
+    import logging
+
+    logging.getLogger('logit')
+
+    def xxx(request):
+        logger.debug(func.__name__)
+        logger.debug(request.GET)
+        logger.debug(request.POST)
+```
