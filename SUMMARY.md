@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Databases](Databases/README.md)
+  * [Emoji](Databases/Emoji.md)
   * [Migrations](Databases/Migrations.md)
   * [MultipleDatabases](Databases/MultipleDatabases.md)
 * [Decorators](Decorators/README.md)
