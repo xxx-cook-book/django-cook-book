@@ -3,35 +3,47 @@
 ## django-mobi
 
 * Open Source Project: [https://bitbucket.org/kencochrane/django-mobi/](https://bitbucket.org/kencochrane/django-mobi/)
+
 * Installation
-```shell
+
+  ```shell
   pip install django-mobi
-```
+  ```
+
+
 * Usage
-```python
+
+  ```python
   def khb_home(request):
       render_tmp = 'home/wap_home.html' if request.mobile else 'home/pc_home.html'
       return render(request, render_tmp, {})
-```
+  ```
+
+
 * Settings.py
-```python
+
+  ```python
   MIDDLEWARE_CLASSES = (
       ...
       'mobi.middleware.MobileDetectionMiddleware',
       ...
   )
-```
-
+  ```
 
 ### django-detect
 
 * Open Source Project: [https://github.com/Brightcells/django-detect](https://github.com/Brightcells/django-detect)
+
 * Installation
-```shell
+
+  ```shell
   pip install django-detect
-```
+  ```
+
+
 * Usage
-```python
+
+  ```
   # Weixin／Wechat
   request.weixin
   request.weixin.version
@@ -46,12 +58,15 @@
   # Android
   request.Android
   request.Android.version
-```
+  ```
+
+
 * Settings.py
-```python
+
+  ```python
   MIDDLEWARE_CLASSES = (
       ...
       'detect.middleware.UserAgentDetectionMiddleware',
       ...
   )
-```
+  ```
