@@ -1,8 +1,10 @@
 # Migrations
 
-## Django 1.7 及以后
+## After Django 1.7
 
-##### Commands
+_New In Django 1.7_
+
+#### Commands
 
 * Makemigrations
 
@@ -16,7 +18,7 @@
   python manage.py migrate
   ```
 
-##### Problems
+#### Problems
 
 * ValueError: Cannot serialize:
   * Models
@@ -51,9 +53,9 @@
       uid = ShortUUIDField(_(u'uid'), max_length=255, help_text=u'User UUID', db_index=True)
       ```
 
-##  Django 1.7 以前
+##  Before Django 1.7
 
-##### 3rd Library
+#### South
 
 * Install
 
@@ -61,7 +63,7 @@
   pip install south
   ```
 
-##### Commands
+#### Commands
 
 * Initial
 
@@ -69,7 +71,7 @@
   python manage.py schemamigration app_name --initial
   ```
 
-* Add Field
+* Add-On Field
 
   ```shell
   python manage.py schemamigration app_name --auto
@@ -96,6 +98,8 @@
     python manage.py migrate app_name 0001 --fake
     ```
 
+
+#### Problems
 
 * Multiple Branches
 

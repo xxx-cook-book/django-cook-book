@@ -2,21 +2,10 @@
 
 ## django-mobi
 
-* Open Source Project: [https://bitbucket.org/kencochrane/django-mobi/](https://bitbucket.org/kencochrane/django-mobi/)
-
 * Installation
 
   ```shell
   pip install django-mobi
-  ```
-
-
-* Usage
-
-  ```python
-  def khb_home(request):
-      render_tmp = 'home/wap_home.html' if request.mobile else 'home/pc_home.html'
-      return render(request, render_tmp, {})
   ```
 
 
@@ -30,14 +19,33 @@
   )
   ```
 
-### django-detect
 
-* Open Source Project: [https://github.com/Brightcells/django-detect](https://github.com/Brightcells/django-detect)
+* Usage
+
+  ```python
+  def khb_home(request):
+      render_tmp = 'home/wap_home.html' if request.mobile else 'home/pc_home.html'
+      return render(request, render_tmp, {})
+  ```
+
+
+## django-detect
 
 * Installation
 
   ```shell
   pip install django-detect
+  ```
+
+
+* Settings.py
+
+  ```python
+  MIDDLEWARE_CLASSES = (
+      ...
+      'detect.middleware.UserAgentDetectionMiddleware',
+      ...
+  )
   ```
 
 
@@ -60,13 +68,8 @@
   request.Android.version
   ```
 
+## References
 
-* Settings.py
+[1] kencochrane@Bitbucket, [https://bitbucket.org/kencochrane/django-mobi/](https://bitbucket.org/kencochrane/django-mobi/)
 
-  ```python
-  MIDDLEWARE_CLASSES = (
-      ...
-      'detect.middleware.UserAgentDetectionMiddleware',
-      ...
-  )
-  ```
+[2] Brightcells@Github, [https://github.com/Brightcells/django-detect](https://github.com/Brightcells/django-detect)
