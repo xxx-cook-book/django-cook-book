@@ -132,4 +132,3 @@
       ```shell
       python manage.py migrate app_name 0005 --fake
       ```
-
