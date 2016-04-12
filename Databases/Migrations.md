@@ -2,7 +2,7 @@
 
 ## Django 1.7 及以后
 
-### Commands
+##### Commands
 
 * Makemigrations
 
@@ -16,7 +16,7 @@
   python manage.py migrate
   ```
 
-### Problems
+##### Problems
 
 * ValueError: Cannot serialize:
   * Models
@@ -53,7 +53,7 @@
 
 ##  Django 1.7 以前
 
-### 3rd Library
+##### 3rd Library
 
 * Install
 
@@ -61,7 +61,7 @@
   pip install south
   ```
 
-### Commands
+##### Commands
 
 * Initial
 
@@ -79,7 +79,7 @@
 
   ```shell
   python manage.py syncdb  # Syncdb has already changed by South, to create table ``south_migrationhistory`` in Database
-  python manage.py convert_to_south app_name
+  python manage.py convert_to_south app_name  # create 0001_initial.py, insert record in table ``south_migrationhistory``
   ```
 
 * Forwards／Backwards
@@ -90,8 +90,46 @@
     python manage.py migrate app_name 0001
     ```
 
-  * ​Database Not and South_migrationhistory Change
+  * Database Not and South_migrationhistory Change
 
     ```shell
     python manage.py migrate app_name 0001 --fake
     ```
+
+
+* Multiple Branches
+
+  * Suppose app_name developed in two branches(master and branch2) from 0004.
+
+  * At the time of merge, mater is 0007 and branch2 is 0008, and they don't add the same field.
+
+  * Solve multiple branches merge:
+
+    * Exec command in master branch
+
+      ```shell
+      git merge branch2
+      ```
+
+    * Solve conflict
+
+    * south_migrationhistory back to 004
+
+      ```shell
+      python manage.py migrate app_name 0004 --fake
+      ```
+
+    * delete migrations after 0004
+
+    * create new migration
+
+      ```shell
+      python manage.py schemamigration app_name --auto
+      ```
+
+    * south_migrationhistory back to 0005
+
+      ```shell
+      python manage.py migrate app_name 0005 --fake
+      ```
+
