@@ -2,11 +2,11 @@
 
 * Open Source Project: [https://github.com/Brightcells/django-logit](https://github.com/Brightcells/django-logit)
 * Installation
-```
+```shell
   pip install django-logit
 ```
 * Usage
-```
+```python
   from logit import logit
 
   @logit
@@ -14,7 +14,7 @@
       xxx
 ```
 * Settings.py
-```
+```python
 # logger setting
 LOGGING = {
     'version': 1,
@@ -45,9 +45,11 @@ LOGGING = {
 }
 ```
 * Then the logs will be stored in logfile /tmp/logit.log
+
 * Advantage
+
   Using logit decorator is a shortcut for below:
-```
+```python
     import logging
 
     logging.getLogger('logit')
