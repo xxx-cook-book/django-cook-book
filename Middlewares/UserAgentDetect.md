@@ -21,6 +21,8 @@
       ...
   )
 ```
+
+
 ### django-detect
 
 * Open Source Project: [https://github.com/Brightcells/django-detect](https://github.com/Brightcells/django-detect)
