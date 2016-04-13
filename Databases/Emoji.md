@@ -14,7 +14,7 @@ CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 * TABLE
 * COLUMN
 
-## Settings.py
+#### Settings.py
 
 ```python
 DATABASES = {
@@ -27,11 +27,11 @@ DATABASES = {
 ```
 
 * ``charset`` in ``DatabaseWrapper`` in ``django/db/backends/mysql/base.py`` default ``utf8``
-*  ``charset`` setting as ``utf8mb4``  in ``DATABASES`` in ``Settings.py``
+* ``charset`` setting as ``utf8mb4``  in ``DATABASES`` in ``Settings.py``
 
 ##  Before MySQL 5.5.3
 
-## unicode_escape
+#### Unicode_escape
 
 ```python
 user.last_name = u'Slatkevičius'.encode('unicode_escape')
@@ -43,9 +43,33 @@ print user.last_name.decode('unicode_escape')
 >>> Slatkevičius
 ```
 
-## pyemoji
+#### Pyemoji
 
 * Emoji Convert & Replace
+
+* Installation
+
+  ```shell
+  pip install pyemoji
+  ```
+
+* Usage
+
+  ```python
+  In [1]: import pyemoji
+
+  In [2]: pyemoji.encode(u'笑脸表情：😄')
+  Out[2]: '\\u7b11\\u8138\\u8868\\u60c5\\uff1a\\U0001f604'
+
+  In [3]: print pyemoji.encode(u'笑脸表情：😄')
+  \u7b11\u8138\u8868\u60c5\uff1a\U0001f604
+
+  In [4]: pyemoji.decode('\\u7b11\\u8138\\u8868\\u60c5\\uff1a\\U0001f604')
+  Out[4]: u'\u7b11\u8138\u8868\u60c5\uff1a\U0001f604'
+
+  In [5]: print pyemoji.decode('\\u7b11\\u8138\\u8868\\u60c5\\uff1a\\U0001f604')
+  笑脸表情：😄
+  ```
 
 # References
 

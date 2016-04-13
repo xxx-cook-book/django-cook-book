@@ -15,5 +15,8 @@ _book
 *.mobi
 *.pdf
 
+# Mac OS X
+.DS_Store
+
 # PyCharm
-.idea/
+.idea
