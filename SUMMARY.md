@@ -7,6 +7,7 @@
   * [Emoji](Databases/Emoji.md)
   * [Migrations](Databases/Migrations.md)
   * [MultipleDatabases](Databases/MultipleDatabases.md)
+  * [PersistentConnections](Databases/PersistentConnections.md)
 * [Decorators](Decorators/README.md)
 * [Logs](Logs/README.md)
   * [Logging Request Params](Logs/LoggingRequestParams.md)

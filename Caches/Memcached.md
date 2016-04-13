@@ -45,7 +45,7 @@
 
     ```shell
     sudo apt-get install libmemcached-dev  # Ubuntu
-    sudo brew install libmemcached         # Mac
+    sudo brew install libmemcached         # Mac OS X
     ```
 
   * Install Bingding
