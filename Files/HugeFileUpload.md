@@ -1,5 +1,28 @@
 # Huge File Upload
 
+## File Upload
+
+* Upload
+
+  ```python
+  photo_path = 'fly/{}{}'.format(shortuuid.uuid(), os.path.splitext(photo.name)[1] or 'jpeg')
+
+  if default_storage.exists(photo_path):
+      default_storage.delete(photo_path)
+  default_storage.save(photo_path, photo)
+  ```
+
+* Problem
+
+  * Upload huge file as above without any settings, the file's ``File Permission / Access Modes`` as below
+
+    ```shell
+    $ ll ZWMwDwN8hcheGm3ScHxkui
+    -rw------- 1 django django 124203 Apr 16 18:24 ZWMwDwN8hcheGm3ScHxkui.jpeg
+    ```
+
+  * Visit this file in browser will be ``403 Forbidden``
+
 ## InMemoryUploadedFile/TemporaryUploadedFile
 * 1M Size(InMemoryUploadedFile)
   ```python
