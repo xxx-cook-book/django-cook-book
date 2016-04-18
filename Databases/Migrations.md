@@ -1,6 +1,6 @@
 # Migrations
 
-## After Django 1.7
+## Since Django 1.7
 
 _New In Django 1.7_
 

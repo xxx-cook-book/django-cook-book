@@ -1,6 +1,6 @@
 # Migrations
 
-## After MySQL 5.5.3
+## Since MySQL 5.5.3
 
 _New In MySQL 5.5.3_
 
