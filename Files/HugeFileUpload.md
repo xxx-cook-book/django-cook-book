@@ -49,6 +49,6 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880  # InMemoryUploadedFile Max Size, Default 
 FILE_UPLOAD_PERMISSIONS = 0o644  # TemporaryUploadedFile File Permissions, Default 0o600(-rw-------), Current Setting 0o644(-rw-r--r--)
 ```
 
-## 参考链接
+## References
 [1] Ben@StackOverflow, [Django Image Upload…Prevent huge file uploads](http://stackoverflow.com/questions/5767840/django-image-upload-prevent-huge-file-uploads)
 
