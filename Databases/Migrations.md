@@ -37,7 +37,7 @@ _New In Django 1.7_
   * Solution
     * Use ShortUUIDField
 
-    * Install
+    * Installation
       ```shell
       pip install django-shortuuidfield
       ```
@@ -103,11 +103,11 @@ _New In Django 1.7_
 
 * Multiple Branches
 
-  * Suppose app_name developed in two branches(master and branch2) from 0004.
+  * Suppose app_name developed in two branches(master and branch2) from 0004
 
-  * At the time of merge, mater is 0007 and branch2 is 0008, and they don't add the same field.
+  * At the time of merge, mater is 0007 and branch2 is 0008, and they don't add the same field
 
-  * Solve multiple branches merge:
+  * Solve multiple branches merge
 
     * Exec command in master branch
 

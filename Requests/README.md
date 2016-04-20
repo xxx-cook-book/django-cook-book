@@ -2,17 +2,17 @@
 
 * HttpRequest.REQUEST
 
-  Deprecated since version 1.7
+  Deprecated since Django 1.7
 
-  Removed since version 1.9
+  Removed since Django 1.9
 
-  * For convenience, a dictionary-like object that searches `POST` first, then `GET`. Inspired by PHP’s `$_REQUEST`.
-
-
-* For example, if `GET = {"name": "john"}` and `POST = {"age": '34'}`, `REQUEST["name"]` would be`"john"`, and `REQUEST["age"]` would be `"34"`.
+  * For convenience, a dictionary-like object that searches `POST` first, then `GET`. Inspired by PHP’s `$_REQUEST`
 
 
-* It’s strongly suggested that you use `GET` and `POST` instead of `REQUEST`, because the former are more explicit.
+* For example, if `GET = {"name": "john"}` and `POST = {"age": '34'}`, `REQUEST["name"]` would be`"john"`, and `REQUEST["age"]` would be `"34"`
+
+
+* It’s strongly suggested that you use `GET` and `POST` instead of `REQUEST`, because the former are more explicit
 
   Support both ``GET`` and ``POST``
 
