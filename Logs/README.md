@@ -1,4 +1,4 @@
 # Logs
 
-* [Logging Request Params](Logs/LoggingRequestParams.md)
+* [Logging Request Params](LoggingRequestParams.md)
 
