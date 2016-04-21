@@ -72,4 +72,4 @@
 
 [1] kencochrane@Bitbucket, [django-mobi — Django middleware and view decorator to detect phones and small-screen devices](https://bitbucket.org/kencochrane/django-mobi/)
 
-[2] Brightcells@Github, [django-detect — UserAgent Detect](https://github.com/Brightcells/django-detect)
+[2] Brightcells@Github, [django-detect — Django UserAgent Detect](https://github.com/Brightcells/django-detect)

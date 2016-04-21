@@ -29,11 +29,13 @@
   - [Huge File Upload](Files/HugeFileUpload.md)
 
 * [Logs](Logs/README.md)
-  * [Logging Request Params](Logs/LoggingRequestParams.md)
 
 * [Middlewares](Middlewares/README.md)
-  * [User Agent Detect](Middlewares/UserAgentDetect.md)
+
   * [Url Parse](Middlewares/UrlParse.md)
+
+
+  * [User Agent Detect](Middlewares/UserAgentDetect.md)
 
 * [Performances](Performances/README.md)
 
