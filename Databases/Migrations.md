@@ -42,14 +42,10 @@ _New In Django 1.7_
       pip install django-shortuuidfield
       ```
 
-    * Import
-
-      ```python
-      from shortuuidfield import ShortUUIDField
-      ```
-
     * ​Usage
       ```python
+      from shortuuidfield import ShortUUIDField
+
       uid = ShortUUIDField(_(u'uid'), max_length=255, help_text=u'User UUID', db_index=True)
       ```
 

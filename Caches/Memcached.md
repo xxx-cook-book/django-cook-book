@@ -78,6 +78,6 @@
 
 [1] Docs@DjangoProject, [Django’s cache framework](https://docs.djangoproject.com/en/1.9/topics/cache/)
 
-[2] python-memcached@Github, [python-memcached —— A python memcached client library](https://github.com/linsomniac/python-memcached)
+[2] python-memcached@Github, [python-memcached — A python memcached client library](https://github.com/linsomniac/python-memcached)
 
-[3] pylibmc@Github, [pylibmc —— A Python wrapper around the libmemcached interface from TangentOrg](https://github.com/lericson/pylibmc)
+[3] pylibmc@Github, [pylibmc — A Python wrapper around the libmemcached interface from TangentOrg](https://github.com/lericson/pylibmc)

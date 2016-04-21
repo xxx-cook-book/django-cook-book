@@ -73,4 +73,4 @@ print user.last_name.decode('unicode_escape')
 
 # References
 
-[1] Brightcells@Github, [pyemoji —— Emoji Convert &Replace](https://github.com/Brightcells/pyemoji)
+[1] Brightcells@Github, [pyemoji — Emoji Convert &Replace](https://github.com/Brightcells/pyemoji)
