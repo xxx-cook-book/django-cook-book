@@ -100,7 +100,7 @@
 
 * Settings.py
 
-  ```
+  ```python
   MIDDLEWARE_CLASSES = (
       ...
       'uri.middleware.URIMiddleware',
