@@ -3,13 +3,8 @@
 * [Introduction](README.md)
 
 * [Admins](Admins/README.md)
-
   * [Copy An Object](Admins/CopyAnObject.md)
-
-
   * [Display Extra Field](Admins/DisplayExtraField.md)
-
-
   * [Exec After Click Delete](Admins/ExecAfterClickDelete.md)
   * [Exec After Click Save](Admins/ExecAfterClickSave.md)
   * [Field Readonly After Save](Admins/FieldReadonlyAfterSave.md)
