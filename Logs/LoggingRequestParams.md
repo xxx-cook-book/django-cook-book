@@ -60,6 +60,7 @@ logging.getLogger('logit')
 
 def xxx(request):
     logger.debug(func.__name__)
+    logger.debug(request.body)
     logger.debug(request.GET)
     logger.debug(request.POST)
 ```
