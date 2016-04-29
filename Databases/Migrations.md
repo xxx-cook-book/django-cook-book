@@ -30,8 +30,6 @@ _New In Django 1.7_
     ```shell
     python manage.py migrate app_name 0001 --fake
     ```
-    * Attention ``NOT NULL`` or ``DEFAULT NULL``
-    * ERROR 1265 (01000): Data truncated for column 'nickname' at row 2
 
 #### Problems
 

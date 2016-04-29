@@ -31,6 +31,8 @@ CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
   ALTER TABLE table_name MODIFY COLUMN col VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL;
   ```
+  * Attention ``NOT NULL`` or ``DEFAULT NULL``
+  * ERROR 1265 (01000): Data truncated for column 'nickname' at row 2
 
 
 #### Settings.py
