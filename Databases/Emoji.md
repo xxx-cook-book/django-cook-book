@@ -1,4 +1,4 @@
-# Migrations
+# Emoji
 
 ## Since MySQL 5.5.3
 
@@ -6,13 +6,32 @@ _New In MySQL 5.5.3_
 
 #### Charset
 
-```mysql
+```sql
 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 ```
 
 * DATABASE
+
+  ```sql
+  ALTER DATABASE database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+  ```
+
 * TABLE
+
+  ```sql
+  ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+  ```
+
 * COLUMN
+
+  ```sql
+  ALTER TABLE table_name MODIFY COLUMN col VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+  ALTER TABLE table_name MODIFY COLUMN col VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+
+  ALTER TABLE table_name MODIFY COLUMN col VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL;
+  ```
+
 
 #### Settings.py
 

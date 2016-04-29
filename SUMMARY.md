@@ -17,6 +17,7 @@
   * [Migrations](Databases/Migrations.md)
   * [Multiple Databases](Databases/MultipleDatabases.md)
   * [Persistent Connections](Databases/PersistentConnections.md)
+  * [Raw SQL](Databases/RawSQL.md)
 
 * [Decorators](Decorators/README.md)
   * [Logging Request Params](Logs/LoggingRequestParams.md)

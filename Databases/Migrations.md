@@ -17,6 +17,21 @@ _New In Django 1.7_
   ```shell
   python manage.py migrate
   ```
+* Forwards／Backwards
+
+  * Database and ``Django_migrations`` Both Change
+
+    ```shell
+    python manage.py migrate app_name 0001
+    ```
+
+  * Database Not and ``Django_migrations`` Change
+
+    ```shell
+    python manage.py migrate app_name 0001 --fake
+    ```
+    * Attention ``NOT NULL`` or ``DEFAULT NULL``
+    * ERROR 1265 (01000): Data truncated for column 'nickname' at row 2
 
 #### Problems
 
@@ -82,13 +97,13 @@ _New In Django 1.7_
 
 * Forwards／Backwards
 
-  * Database and South_migrationhistory Both Change
+  * Database and ``South_migrationhistory`` Both Change
 
     ```shell
     python manage.py migrate app_name 0001
     ```
 
-  * Database Not and South_migrationhistory Change
+  * Database Not and ``South_migrationhistory`` Change
 
     ```shell
     python manage.py migrate app_name 0001 --fake
