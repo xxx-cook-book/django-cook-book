@@ -54,7 +54,7 @@
     pip install pylibmc
     ```
 
-# Usage
+## Usage
 
 * Basic
 
@@ -66,7 +66,7 @@
   'hello, world!'
   ```
 
-# Problems
+## Problems
 
 * Using python-memcached happens multi server's data outer-sync
   * [How does django handle multiple memcached servers?](http://stackoverflow.com/questions/6876250/how-does-django-handle-multiple-memcached-servers)
@@ -74,7 +74,7 @@
 * When ``List`` is too large, set/get is too slow
   * Use ``String`` replace of ``List``, ``json.dumps()`` before set, ``json.loads()`` after get
 
-# References
+## References
 
 [1] Docs@DjangoProject, [Django’s cache framework](https://docs.djangoproject.com/en/1.9/topics/cache/)
 
