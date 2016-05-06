@@ -15,6 +15,7 @@
   * [Multiple Databases](Databases/MultipleDatabases.md)
   * [Persistent Connections](Databases/PersistentConnections.md)
   * [Raw SQL](Databases/RawSQL.md)
+  * [Select For Update](Databases/SelectForUpdate.md)
 * [Decorators](Decorators/README.md)
   * [Logging Request Params](Logs/LoggingRequestParams.md)
 * [Domains](Domains/README.md)
@@ -33,3 +34,10 @@
 * [Responses](Responses/README.md)
   * [ExcelResponse](Responses/ExcelResponse.md)
   * [JsonResponse](Responses/JsonResponse.md)
+
+
+* [Tags and Filters](TagsAndFilters/README.md)
+
+  * [Built-in](TagsAndFilters/Built-in.md)
+  * [3rd](TagsAndFilters/3rd.md)
+  * [DIY](TagsAndFilters/DIY.md)
