@@ -26,6 +26,8 @@
 * [Files](Files/README.md)
   - [Huge File Upload](Files/HugeFileUpload.md)
 * [Logs](Logs/README.md)
+  * [Handlers](Logs/Handlers/README.md)
+    * [RotatingFileHandler](Logs/Handlers/RotatingFileHandler.md)
 * [Middlewares](Middlewares/README.md)
   * [Url Parse](Middlewares/UrlParse.md)
   * [User Agent Detect](Middlewares/UserAgentDetect.md)
