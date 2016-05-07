@@ -25,7 +25,7 @@ When using weekday-based rotation, specify ‘W0’ for Monday, ‘W1’ for Tue
 
 When computing the next rollover time for the first time (when the handler is created), the last modification time of an existing log file, or else the current time, is used to compute when the next rotation will occur.
 
-**PS:** *``the next rollover time``* = (*``last modification time``* or *``the current time``*) + *when* * *interval*
+**PS:** ``the next rollover time`` = (``last modification time`` or ``the current time``) + when * interval
 
 ## LOGGING
 
