@@ -28,6 +28,7 @@
 * [Logs](Logs/README.md)
   * [Handlers](Logs/Handlers/README.md)
     * [RotatingFileHandler](Logs/Handlers/RotatingFileHandler.md)
+    * [TimedRotatingFileHandler](Logs/Handlers/TimedRotatingFileHandler.md)
 * [Middlewares](Middlewares/README.md)
   * [Url Parse](Middlewares/UrlParse.md)
   * [User Agent Detect](Middlewares/UserAgentDetect.md)
@@ -40,6 +41,6 @@
 
 * [Tags and Filters](TagsAndFilters/README.md)
 
-  * [Built-in](TagsAndFilters/Built-in.md)
   * [3rd](TagsAndFilters/3rd.md)
+  * [Built-in](TagsAndFilters/Built-in.md)
   * [DIY](TagsAndFilters/DIY.md)
