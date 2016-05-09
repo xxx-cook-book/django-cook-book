@@ -38,6 +38,74 @@ LOGGING = {
     },
 }
 ```
+* Use RotatingFileHandler to supports rotation of disk log files.
+
+  ```python
+  LOGGING = {
+      'version': 1,
+      'disable_existing_loggers': False,
+      'formatters': {
+          'verbose': {
+              'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+          },
+          'simple': {
+              'format': '%(levelname)s %(message)s'
+          },
+      },
+      'handlers': {
+          'logit': {
+              'level': 'DEBUG',
+              'class': 'logging.handlers.RotatingFileHandler',
+              'filename': '/tmp/logit.log',
+              'maxBytes': 15728640,  # 1024 * 1024 * 15B = 15MB
+              'backupCount': 10,
+              'formatter': 'verbose',
+          },
+      },
+      'loggers': {
+          'logit': {
+              'handlers': ['logit'],
+              'level': 'DEBUG',
+              'propagate': True,
+          },
+      },
+  }
+  ```
+
+* Use TimedRotatingFileHandler to support rotation of disk log files at certain timed intervals.
+
+  ```python
+  LOGGING = {
+      'version': 1,
+      'disable_existing_loggers': False,
+      'formatters': {
+          'verbose': {
+              'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+          },
+          'simple': {
+              'format': '%(levelname)s %(message)s'
+          },
+      },
+      'handlers': {
+          'logit': {
+              'level': 'DEBUG',
+              'class': 'logging.handlers.TimedRotatingFileHandler',
+              'filename': '/tmp/logit.log',
+              'when': 'midnight',
+              'backupCount': 10,
+              'formatter': 'verbose',
+          },
+      },
+      'loggers': {
+          'logit': {
+              'handlers': ['logit'],
+              'level': 'DEBUG',
+              'propagate': True,
+          },
+      },
+  }
+  ```
+
 ## Usage
 
 ```python
