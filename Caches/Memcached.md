@@ -76,7 +76,7 @@
 
 ## References
 
-[1] Docs@DjangoProject, [Django’s cache framework](https://docs.djangoproject.com/en/1.9/topics/cache/)
+[1] Docs@DjangoProject, [Django’s cache framework](https://docs.djangoproject.com/en/dev/topics/cache/)
 
 [2] python-memcached@Github, [python-memcached — A python memcached client library](https://github.com/linsomniac/python-memcached)
 

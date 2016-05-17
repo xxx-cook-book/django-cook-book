@@ -41,6 +41,7 @@
 * [Requests](Requests/README.md)
 * [Responses](Responses/README.md)
   * [ExcelResponse](Responses/ExcelResponse.md)
+  * [Http404](Responses/Http404.md)
   * [JsonResponse](Responses/JsonResponse.md)
 
 
