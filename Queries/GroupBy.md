@@ -7,6 +7,13 @@ users = TipReceiverInfo.objects.filter(packet_id=packet_id, status=True).order_b
 users = map(lambda x: {'receiver_room': x[0], 'receiver_user': [y for y in x[1]]}, itertools.groupby(users, lambda x: x['receiver_room']))
 ```
 
+or
+
+```python
+users = TipReceiverInfo.objects.filter(packet_id=packet_id, status=True).order_by('receiver_room')
+users = map(lambda x: {'receiver_room': x[0], 'receiver_user': [y.data for y in x[1]]}, itertools.groupby(users, lambda x: x.receiver_room))
+```
+
 ## Raw SQL
 
 ## References
