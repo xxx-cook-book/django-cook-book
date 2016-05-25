@@ -32,7 +32,8 @@
     * [RotatingFileHandler](Logs/Handlers/RotatingFileHandler.md)
     * [TimedRotatingFileHandler](Logs/Handlers/TimedRotatingFileHandler.md)
 * [Middlewares](Middlewares/README.md)
-  * [Url Parse](Middlewares/UrlParse.md)
+  * [Cross-Origin Resource Sharing (CORS)](Middlewares/CORS.md)
+  * [URL Parse](Middlewares/URLParse.md)
   * [User Agent Detect](Middlewares/UserAgentDetect.md)
 * [Performances](Performances/README.md)
 * [Queries](Queries/README.md)
@@ -47,6 +48,7 @@
 
 * [Tags and Filters](TagsAndFilters/README.md)
 
-  * [3rd](TagsAndFilters/3rd.md)
+  * [3rd](TagsAndFilters/3rd/README.md)
+    * [django-mathfilters — provides a set of simple math filters for Django](TagsAndFilters/3rd/django-mathfilters.md)
   * [Built-in](TagsAndFilters/Built-in.md)
   * [DIY](TagsAndFilters/DIY.md)

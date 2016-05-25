@@ -1,4 +1,4 @@
-# Url Parse
+# URL Parse
 
 ## [Components of an URI](https://medialize.github.io/URI.js/about-uris.html)
 

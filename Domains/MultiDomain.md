@@ -53,13 +53,13 @@
     pip install django-multidomain
     ```
 
-  * Add ‘multidomain’ to ”INSTALLED_APPS”
+  * Add ``multidomain`` to ``INSTALLED_APPS``
 
     ```python
     INSTALLED_APPS += ('multidomain', )
     ```
 
-  * Add ‘multidomain.middleware.DomainMiddleware’ to ”MIDDLEWARE_CLASSES”
+  * Add ``multidomain.middleware.DomainMiddleware`` to ``MIDDLEWARE_CLASSES``
 
     ```python
     MIDDLEWARE_CLASSES += ('multidomain.middleware.DomainMiddleware', )
@@ -72,7 +72,7 @@
     python manage.py startapp two
     ```
 
-  * Create a file for each domain you have (For example: ‘domain-one.dev’ and ‘domain-two.dev’)
+  * Create a file for each domain you have (For example: ``domain-one.dev`` and ``domain-two.dev``)
 
     * urls.py (by default)
 
@@ -107,7 +107,7 @@
       )
       ```
 
-  * Declare host/domain urlconfig tuple ”URL_CONFIG”
+  * Declare host/domain urlconfig tuple ``URL_CONFIG``
 
     ```python
     URL_CONFIG = (
