@@ -32,29 +32,6 @@ pip install django-mathfilters
   - `mod` – modulo
   - `addition` – replacement for the `add` filter with support for float / decimal types
 
-* Examples
-
-  ```html
-  <h1>Basic math filters</h1>
-
-  <ul>
-      <li>8 + 3 = {{ 8|add:3 }}</li>
-
-      <li>13 - 17 = {{ 13|sub:17 }}</li>
-
-      {% with answer=42 %}
-      <li>42 * 0.5 = {{ answer|mul:0.5 }}</li>
-      {% endwith %}
-
-      {% with numerator=12 denominator=3 %}
-      <li>12 / 3 = {{ numerator|div:denominator }}</li>
-      {% endwith %}
-
-      <li>|-13| = {{ -13|abs }}</li>
-  </ul>
-  ```
-
-
 ## References
 
 [1] django-mathfilters@Github, [django-mathfilters — provides a set of simple math filters for Django](https://github.com/dbrgn/django-mathfilters)
