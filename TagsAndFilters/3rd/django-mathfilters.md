@@ -35,10 +35,6 @@ pip install django-mathfilters
 * Examples
 
   ```html
-  {% load mathfilters %}
-
-  ...
-
   <h1>Basic math filters</h1>
 
   <ul>

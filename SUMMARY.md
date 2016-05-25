@@ -44,10 +44,7 @@
   * [ExcelResponse](Responses/ExcelResponse.md)
   * [Http404](Responses/Http404.md)
   * [JsonResponse](Responses/JsonResponse.md)
-
-
 * [Tags and Filters](TagsAndFilters/README.md)
-
   * [3rd](TagsAndFilters/3rd/README.md)
     * [django-mathfilters — provides a set of simple math filters for Django](TagsAndFilters/3rd/django-mathfilters.md)
   * [Built-in](TagsAndFilters/Built-in.md)
