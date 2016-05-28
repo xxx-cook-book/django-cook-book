@@ -7,6 +7,8 @@
   * [Exec After Click Delete](Admins/ExecAfterClickDelete.md)
   * [Exec After Click Save](Admins/ExecAfterClickSave.md)
   * [Field Readonly After Save](Admins/FieldReadonlyAfterSave.md)
+* [Auth](Auth/README.md)
+  * [Password](Auth/Password.md)
 * [Caches](Caches/README.md)
   * [Memcached](Caches/Memcached.md)
 * [Databases](Databases/README.md)
