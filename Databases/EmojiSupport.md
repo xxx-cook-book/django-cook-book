@@ -1,4 +1,4 @@
-# Emoji
+# Emoji Support
 
 ## Since MySQL 5.5.3
 
