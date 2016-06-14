@@ -88,10 +88,12 @@
 
 ## Multi Alternatives
 
-* send_mail(…, *html_message=None*)
+* send_mail(…, *message*, ..., *html_message=None*)
 
 
 * https://docs.djangoproject.com/en/dev/topics/email/#sending-alternative-content-types
+
+PS: The ``message`` and ``html_message`` will not display at the same time. Only recipients can not handle an alternative content type. The ``message`` will display.
 
 ## Global Settings
 
