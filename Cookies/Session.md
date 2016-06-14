@@ -161,6 +161,8 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 [1] Docs@DjangoProject, [How to use sessions](https://docs.djangoproject.com/en/dev/topics/http/sessions/)
 
-[2] Django@Github, [Django Global Settings](https://github.com/django/django/blob/354acd04af524ad82002b903df1189581c51cabe/django/conf/global_settings.py#L446)
+[2] Docs@DjangoProject, [Settings for django.contrib.sessions.](https://docs.djangoproject.com/en/dev/ref/settings/#sessions)
 
-[3] MDN, [Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
+[3] Django@Github, [Django Global Settings](https://github.com/django/django/blob/354acd04af524ad82002b903df1189581c51cabe/django/conf/global_settings.py#L446)
+
+[4] MDN, [Document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)

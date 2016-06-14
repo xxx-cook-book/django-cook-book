@@ -29,7 +29,7 @@
   * [Atomic](Databases/Atomic/README.md)
     * [F Expression Update](Databases/Atomic/FExpressionUpdate.md)
     * [Select For Update](Databases/Atomic/SelectForUpdate.md)
-* Emails
+* [Emails](Emails/README.md)
 * [Decorators](Decorators/README.md)
 
   * [Logging Request Params](Logs/LoggingRequestParams.md)
