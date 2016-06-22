@@ -27,6 +27,7 @@ You can create an HTML template named ``404.html`` and place it in the top leve
 
 ```python
 from django.http import Http404
+
 def xxx(request):
     # Some Code
     raise Http404('xxx')
