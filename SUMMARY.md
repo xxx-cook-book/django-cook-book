@@ -7,9 +7,10 @@
   * [Exec After Click Delete](Admins/ExecAfterClickDelete.md)
   * [Exec After Click Save](Admins/ExecAfterClickSave.md)
   * [Field Readonly After Save](Admins/FieldReadonlyAfterSave.md)
-* Asyns
-  * Beanstalkd
+* [Asyns](Asyns/README.md)
+  * [Beanstalkd](Asyns/Beanstalkd.md)
   * Celery
+  * Django Q
 * [Auths](Auths/README.md)
   * [Password](Auths/Password.md)
   * User

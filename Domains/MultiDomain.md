@@ -88,7 +88,6 @@
     * urls_one.py
 
       ```python
-      # -*- coding: utf-8 -*-
       from django.conf.urls import patterns, include, url
 
       urlpatterns = patterns('',
@@ -99,7 +98,6 @@
     * urls_two.py
 
       ```python
-      # -*- coding: utf-8 -*-
       from django.conf.urls import patterns, include, url
 
       urlpatterns = patterns('',

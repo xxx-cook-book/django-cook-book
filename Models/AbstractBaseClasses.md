@@ -3,11 +3,8 @@
 ## basemodels.py
 
 ```python
-# -*- coding: utf-8 -*-
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
 
 class CreateUpdateMixin(models.Model):
     status = models.BooleanField(_(u'status'), default=True, help_text=_(u'Status'), db_index=True)
@@ -21,8 +18,6 @@ class CreateUpdateMixin(models.Model):
 ## Usage
 
 ```python
-# -*- coding: utf-8 -*-
-
 from xxx.basemodels import CreateUpdateMixin
 
 class XxxInfo(CreateUpdateMixin):
