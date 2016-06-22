@@ -1,0 +1,34 @@
+{
+    "output": null,
+    "generator": "site",
+    "title": "Django Cook Book",
+    "description": null,
+    "isbn": "null",
+    "extension": null,
+    "plugins": [],
+    "variables": {},
+    "links": {
+        "sidebar": {
+        },
+        "sharing": {
+            "google": null,
+            "facebook": null,
+            "twitter": null,
+            "weibo": null,
+            "all": null
+        }
+    },
+    "pdf": {
+        "pageNumbers": false,
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        },
+        "headerTemplate": null,
+        "footerTemplate": null
+    }
+}

@@ -87,9 +87,23 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 7 * 2
 ```
 
-* Chrome 浏览器中 Session 所在位置
+* Session Position in Chrome
 
   ![](http://ww1.sinaimg.cn/large/c05783a7gw1f4j2336b5dj21i80deq6r.jpg)
+
+## SESSION_SAVE_EVERY_REQUEST
+
+```python
+# Whether to save the session data on every request.
+SESSION_SAVE_EVERY_REQUEST = False
+```
+
+* If you want to realize function of modifying user not active when he doesn't request for a period of time. You can set ``SESSION_SAVE_EVERY_REQUEST`` to be ``True``.
+* Source Code
+  ```python
+  if (modified or settings.SESSION_SAVE_EVERY_REQUEST) and not empty:
+  ```
+  * See [django/contrib/sessions/middleware.py](https://github.com/django/django/blob/master/django/contrib/sessions/middleware.py#L46)
 
 ## Session Cookie HTTPOnly
 
