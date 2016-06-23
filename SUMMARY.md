@@ -41,6 +41,12 @@
 * [Files](Files/README.md)
   - Base64 File Upload
   - [Huge File Upload](Files/HugeFileUpload.md)
+* [HTTPs](HTTPs/README.md)
+  * [Long Pooling](HTTPs/LongPooling/README.md)
+    * [gevent](HTTPs/LongPooling/gevent.md)
+  * [HTTP Streaming](HTTPs/HTTPStreaming/README.md)
+    * [gevent](HTTPs/HTTPStreaming/gevent.md)
+  * WebSocket
 * [Logs](Logs/README.md)
   * [Handlers](Logs/Handlers/README.md)
     * [RotatingFileHandler](Logs/Handlers/RotatingFileHandler.md)
@@ -75,4 +81,3 @@
   * [DIY](TagsAndFilters/DIY.md)
 * Templates
 * Translations
-* WebSockets
