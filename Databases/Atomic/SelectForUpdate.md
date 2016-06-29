@@ -26,7 +26,7 @@ In [6]: with transaction.atomic():
 
   ```
   try:
-      customer = CustomerAccountInfo.objects.select_for_update().get(account_id=account_id)[0]
+      customer = CustomerAccountInfo.objects.select_for_update().get(account_id=account_id)
   except CustomerAccountInfo.DoesNotExist:
       return response(CustomerStatusCode.CUSTOMER_NOT_FOUND)
   ```
