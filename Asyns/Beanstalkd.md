@@ -110,6 +110,6 @@
 
 ## References
 
-[1] beanstalkd@TT4IT, [beanstalkd —— Beanstalk is a simple, fast work queue.](http://tt4it.com/resources/discuss/116/)
+[1] beanstalkd@TT4IT, [beanstalkd — Beanstalk is a simple, fast work queue.](http://tt4it.com/resources/discuss/116/)
 
-[2] django-beanstalkd@Github, [django-beanstalkd —— A convenience wrapper for beanstalkd clients and workers in Django using the beanstalkc library for Python](https://github.com/jonasvp/django-beanstalkd)
+[2] django-beanstalkd@Github, [django-beanstalkd — A convenience wrapper for beanstalkd clients and workers in Django using the beanstalkc library for Python](https://github.com/jonasvp/django-beanstalkd)

@@ -51,8 +51,8 @@ DATABASES = {
     1. It gets CONN_MAX_AGE from DATABASES, sets close_at
 
        ```python
-       max_age = self.settings_dict['CONN_MAX_AGE']
-       self.close_at = None if max_age is None else time.time() + max_age
+         max_age = self.settings_dict['CONN_MAX_AGE']
+         self.close_at = None if max_age is None else time.time() + max_age
        ```
 
     2. Actually the code above affects close_if_unusable_or_obsolete, which closes the connection if 'self.close_at is not None and time.time() >= self.close_at'
@@ -76,6 +76,10 @@ DATABASES = {
           from django.db import close_old_connections as close_connection
       except ImportError:
           from django.db import close_connection
+
+      close_connection()
+
+      # Some Query Codes
 
       close_connection()
       ```

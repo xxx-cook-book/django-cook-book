@@ -128,10 +128,17 @@ logging.getLogger('logit')
 
 def xxx(request):
     logger.debug(func.__name__)
-    logger.debug(request.body)
+    try:
+        logger.debug(request.body)
+    except Exception as e:
+        logger.debug(e.message)
     logger.debug(request.GET)
     logger.debug(request.POST)
 ```
+* Why try ``logger.debug(request.body)``
+  * Sometimes access ``request.body`` will raise error
+  * [Exception: You cannot access body after reading from request's data stream](http://stackoverflow.com/questions/19581110/exception-you-cannot-access-body-after-reading-from-requests-data-stream)
+
 ## References
 
 [1] Brightcells@Github, [django-logit — Django Decorator of Logging Request Params](https://github.com/Brightcells/django-logit)

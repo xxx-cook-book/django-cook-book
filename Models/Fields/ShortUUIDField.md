@@ -19,6 +19,11 @@
   * And above will be ``ValueError: Cannot serialize:``
   * Detail See [Migrations](../Databases/Migrations.md)
 
+## UUIDField
+
+_New In Django 1.8_
+
+* https://docs.djangoproject.com/en/dev/ref/models/fields/#uuidfield
 
 ## ShortUUIDField
 
