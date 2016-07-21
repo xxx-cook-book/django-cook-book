@@ -126,14 +126,30 @@ import logging
 
 logging.getLogger('logit')
 
+def loggerit(func, flag, content):
+    logger.debug('func=%s&flag=%s&content=%s', func, flag, content)
+
 def xxx(request):
-    logger.debug(func.__name__)
+    # Get Method Name
+    name = xxx.__name__
+    # Log body content into file
     try:
-        logger.debug(request.body)
+        loggerit(name, 'body', request.body)
     except Exception as e:
-        logger.debug(e.message)
-    logger.debug(request.GET)
-    logger.debug(request.POST)
+        loggerit(name, 'error', e.message)
+    # Log get content into file
+    loggerit(name, 'get', request.GET)
+    # Log post content into file
+    loggerit(name, 'post', request.POST)
+    
+    # Some Codes
+    res = '``string`` or ``stringify json``'
+    
+    # Log response content into file
+    try:
+        loggerit(name, 'res', res)
+    except Exception as e:
+        loggerit(name, 'error', e.message)
 ```
 * Why try ``logger.debug(request.body)``
   * Sometimes access ``request.body`` will raise error

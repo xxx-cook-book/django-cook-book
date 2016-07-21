@@ -18,7 +18,9 @@
   * [Memcached](Caches/Memcached.md)
   * [Redis](Caches/REDIS/README.md)
     * [redis-py](Caches/Redis/redis-py/README.md)
-      * [Functions and Methods](Caches/Redis/redis-py/functions-and-methods.md)
+      * [Functions and Methods](Caches/Redis/redis-py/FunctionsAndMethods/README.md)
+        * [Sorted Set](Caches/Redis/redis-py/FunctionsAndMethods/sorted-set.md)
+        * [Pub/Sub](Caches/Redis/redis-py/FunctionsAndMethods/pub-sub.md)
       * [Magic Usages In Action](Caches/Redis/redis-py/magic-usages-in-action.md)
 * [Cookies](Cookies/README.md)
   * Cookie
@@ -44,8 +46,12 @@
 * Forms
 * [Logs](Logs/README.md)
   * [Handlers](Logs/Handlers/README.md)
-    * [RotatingFileHandler](Logs/Handlers/rotating-file-handler.md)
-    * [TimedRotatingFileHandler](Logs/Handlers/timed-rotating-file-handler.md)
+    * [FileHandler](Logs/Handlers/FileHandler/README.md)
+      * [ConcurrentLogHandler](Logs/Handlers/FileHandler/concurrent-log-handler.md)
+      * [RotatingFileHandler](Logs/Handlers/FileHandler/rotating-file-handler.md)
+      * [TimedRotatingFileHandler](Logs/Handlers/FileHandler/timed-rotating-file-handler.md)
+      * WatchedFileHandler
+    * [SocketHandler](Logs/Handlers/SocketHandler/socket-handler.md)
 * [Middlewares](Middlewares/README.md)
   * [Cross-Origin Resource Sharing (CORS)](Middlewares/CORS.md)
   * [URL Parse](Middlewares/url-parse.md)
@@ -73,6 +79,7 @@
     * dwebsocket
     * Node.js — Socket.io
   * Channals
+  * Push
 * [Requests](Requests/README.md)
 * [Responses](Responses/README.md)
   * [ExcelResponse](Responses/ExcelResponse.md)

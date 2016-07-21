@@ -61,6 +61,10 @@ LOGGING = {
 }
 ```
 
+## Problems
+
+* Logs missing when host in uwsgi with multiple process
+
 ## References
 
 [1] Docs@Python, [15.9. logging.handlers — Logging handlers — 15.9.6. TimedRotatingFileHandler](https://docs.python.org/2/library/logging.handlers.html#timedrotatingfilehandler)
