@@ -19,7 +19,16 @@
   * [Redis](Caches/REDIS/README.md)
     * [redis-py](Caches/Redis/redis-py/README.md)
       * [Functions and Methods](Caches/Redis/redis-py/FunctionsAndMethods/README.md)
+        * String
+        * List
+        * Hash(Dict)
+        * Set
         * [Sorted Set](Caches/Redis/redis-py/FunctionsAndMethods/sorted-set.md)
+        * Filter
+        * Delete
+        * Expire
+        * Counter
+        * Queue
         * [Pub/Sub](Caches/Redis/redis-py/FunctionsAndMethods/pub-sub.md)
       * [Magic Usages In Action](Caches/Redis/redis-py/magic-usages-in-action.md)
 * [Cookies](Cookies/README.md)
