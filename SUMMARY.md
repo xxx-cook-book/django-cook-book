@@ -16,7 +16,7 @@
   * User
 * [Caches](Caches/README.md)
   * [Memcached](Caches/Memcached.md)
-  * [Redis](https://xxx-cook-book.gitbooks.io/redis-cook-book/content/Python/redis-py/)
+  * [Redis](Caches/Redis/README.md)
 * [Cookies](Cookies/README.md)
   * Cookie
   * [Session](Cookies/Session.md)
