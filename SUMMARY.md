@@ -10,13 +10,14 @@
 * [Asyns](Asyns/README.md)
   * [Beanstalkd](Asyns/Beanstalkd.md)
   * Celery
-  * Django Q
+  * [Django Q](Asyns/django-q.md)
 * [Auths](Auths/README.md)
   * [Password](Auths/Password.md)
   * User
 * [Caches](Caches/README.md)
   * [Memcached](Caches/Memcached.md)
   * [Redis](Caches/Redis/README.md)
+    * Django-redis
 * [Cookies](Cookies/README.md)
   * Cookie
   * [Session](Cookies/Session.md)
@@ -25,6 +26,7 @@
     * [F Expression Update](Databases/Atomic/f-expression-update.md)
     * [Select For Update](Databases/Atomic/select-for-update.md)
   * Connection Pool
+    * DButils
   * [Emoji Support](Databases/emoji-support.md)
   * [Migrations](Databases/Migrations.md)
   * [Multiple Databases](Databases/multiple-databases.md)
@@ -59,7 +61,7 @@
     * [ShortUUIDField](Models/Fields/ShortUUIDField.md)
 * [Performances](Performances/README.md)
 * [Queries](Queries/README.md)
-  * Extra/Aggregation
+  * [Extra/Aggregation](Queries/extra-aggregation.md)
   * [F Expression](Queries/FExpression.md)
   * [Group By](Queries/GroupBy.md)
   * Last/Latest

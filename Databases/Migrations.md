@@ -62,6 +62,14 @@ _New In Django 1.7_
       uid = ShortUUIDField(_(u'uid'), max_length=255, help_text=u'User UUID', db_index=True)
       ```
 
+#### South
+
+* Conflict
+
+  ```
+  There is no South database module 'south.db.mysql' for your database. Please either choose a supported database, check for SOUTH_DATABASE_ADAPTER[S] settings, or remove South from INSTALLED_APPS.
+  ```
+
 ##  Before Django 1.7
 
 #### South
@@ -145,3 +153,7 @@ _New In Django 1.7_
       ```shell
       python manage.py migrate app_name 0005 --fake
       ```
+
+## References
+
+[1] ferprez@StackOverflow, [There is no South database module 'south.db.postgresql_psycopg2' for your database](http://stackoverflow.com/questions/29478400/there-is-no-south-database-module-south-db-postgresql-psycopg2-for-your-databa)

@@ -1,6 +1,6 @@
 # Beanstalkd
 
-## Beanstalkd
+## beanstalkd
 
 * Mac OS X
 
