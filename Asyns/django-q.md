@@ -75,7 +75,6 @@ except ImportError:
 
     ```python
     def django_q_test_func(value):
-        import time
         for i in range(1, value + 1):
             print i
             time.sleep(1)
@@ -153,7 +152,10 @@ except ImportError:
       Success
       15:50:07 [Q] INFO Processed [sad-football-fix-floor]
       ```
+
 * Schedules
+  * TODO
+
 ## Admin
 
 ## Redis Connect from Django Q

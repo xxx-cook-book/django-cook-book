@@ -86,6 +86,7 @@
   * [JsonResponse](Responses/JsonResponse.md)
   * StreamingHttpResponse
 * Settings
+* [Signals](Signals/README.md)
 * [Tags and Filters](TagsAndFilters/README.md)
   * [3rd](TagsAndFilters/3rd/README.md)
     * [django-mathfilters — provides a set of simple math filters for Django](TagsAndFilters/3rd/django-mathfilters.md)
