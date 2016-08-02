@@ -118,3 +118,5 @@
 ## References
 
 [1] Brightcells@Github, [django-uri — Django URI](https://github.com/Brightcells/django-uri)
+
+[2] Wikipedia, [Uniform Resource Identifier](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
