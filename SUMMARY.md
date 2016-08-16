@@ -106,5 +106,5 @@
 ## Appendix
 
 * [VS.](VS./README.md)
-  * [``exists()`` vs. ``get() + try/except``](VS./exists-or-count.md)
+  * [``exists()`` vs. ``get() + try/except``](VS./exists-or-get-try-except.md)
   * [``exists()`` vs. ``count()``](VS./exists-or-count.md)
