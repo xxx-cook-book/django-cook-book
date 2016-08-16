@@ -48,7 +48,7 @@ LOGGING = {
 
 ## References
 
-[2] Docs@Python, [15.9. logging.handlers — Logging handlers — 15.9.5. RotatingFileHandler](https://docs.python.org/2/library/logging.handlers.html#rotatingfilehandler)
+[1] Docs@Python, [15.9. logging.handlers — Logging handlers — 15.9.5. RotatingFileHandler](https://docs.python.org/2/library/logging.handlers.html#rotatingfilehandler)
 
 [2] user1157751@StackOverflow, [Django - Rotating File Handler stuck when file is equal to maxBytes](http://stackoverflow.com/questions/26682413/django-rotating-file-handler-stuck-when-file-is-equal-to-maxbytes)
 

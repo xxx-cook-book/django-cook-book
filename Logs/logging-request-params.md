@@ -157,5 +157,5 @@ def xxx(request):
 
 ## References
 
-[1] Brightcells@Github, [django-logit — Django Decorator of Logging Request Params](https://github.com/Brightcells/django-logit)
+[1] django-xxx@Github, [django-logit — Django Decorator of Logging Request Params](https://github.com/django-xxx/django-logit)
 

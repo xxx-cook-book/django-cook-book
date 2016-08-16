@@ -37,18 +37,22 @@
 * [Domains](Domains/README.md)
   * [Multi Domain](Domains/multi-domain.md)
 * [Emails](Emails/README.md)
+* [Exceptions](Exceptions/README.md)
+  * [``ObjectDoesNotExist`` vs. ``DoesNotExist``](Exceptions/ObjectDoesNotExist-DoesNotExist.md)
 * [Files](Files/README.md)
   - [Base64 File Upload](Files/base64-image-upload.md)
   - [Huge File Upload](Files/huge-file-upload.md)
 * Forms
 * [Logs](Logs/README.md)
   * [Handlers](Logs/Handlers/README.md)
-    * [FileHandler](Logs/Handlers/FileHandler/README.md)
+    * [FileHandler](Logs/Handlers/FileHandler/file-handler.md)
       * [ConcurrentLogHandler](Logs/Handlers/FileHandler/concurrent-log-handler.md)
       * [RotatingFileHandler](Logs/Handlers/FileHandler/rotating-file-handler.md)
       * [TimedRotatingFileHandler](Logs/Handlers/FileHandler/timed-rotating-file-handler.md)
-      * WatchedFileHandler
+      * [WatchedFileHandler](Logs/Handlers/FileHandler/watched-file-handler.md)
+    * [RedisHandler](Logs/Handlers/RedisHandler/redis-handler.md)
     * [SocketHandler](Logs/Handlers/SocketHandler/socket-handler.md)
+    * [StreamHandler](Logs/Handlers/StreamHandler/stream-handler.md)
 * [Middlewares](Middlewares/README.md)
   * [Cross-Origin Resource Sharing (CORS)](Middlewares/CORS.md)
   * [URL Parse](Middlewares/url-parse.md)
@@ -87,6 +91,8 @@
   * StreamingHttpResponse
 * Settings
 * [Signals](Signals/README.md)
+* [Subcommands](Subcommands/README.md)
+  * [BaseCommand](Subcommands/BaseCommand.md)
 * [Tags and Filters](TagsAndFilters/README.md)
   * [3rd](TagsAndFilters/3rd/README.md)
     * [django-mathfilters — provides a set of simple math filters for Django](TagsAndFilters/3rd/django-mathfilters.md)
@@ -96,3 +102,9 @@
 * Translations
 * [URLs](URLs/README.md)
   * [Pass Extra Params to Views](URLs/pass-extra-params-to-views.md)
+
+## Appendix
+
+* [VS.](VS./README.md)
+  * [``exists()`` vs. ``get() + try/except``](VS./exists-or-count.md)
+  * [``exists()`` vs. ``count()``](VS./exists-or-count.md)

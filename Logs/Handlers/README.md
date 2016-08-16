@@ -21,5 +21,7 @@
 | %(process)d         | Process ID (if available).               |
 | %(message)s         | The logged message, computed as msg % args. |
 
+## References
 
+[1] Docs@Python, [15.9. logging.handlers — Logging handlers](https://docs.python.org/2/library/logging.handlers.html)
 

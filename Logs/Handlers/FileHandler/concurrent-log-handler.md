@@ -48,6 +48,24 @@ LOGGING = {
 }
 ```
 
+## Problems
+
+```python
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/atexit.py", line 24, in _run_exitfuncs
+    func(*targs, **kargs)
+  File "/usr/lib/python2.7/logging/__init__.py", line 1638, in shutdown
+    h.acquire()
+  File "/home/diors/env/local/lib/python2.7/site-packages/cloghandler.py", line 204, in acquire
+    lock(self.stream_lock, LOCK_EX)
+  File "/home/diors/env/local/lib/python2.7/site-packages/portalocker.py", line 115, in lock
+    fcntl.flock(file.fileno(), flags)
+KeyboardInterrupt
+```
+
+* Connection timed out
+* [Bug 952929 - Bad file descriptor from ConcurrentRotatingFileHandler.stream_lock in beakerd](https://bugzilla.redhat.com/show_bug.cgi?id=952929)
+
 ## References
 
 [1] PyPI, [ConcurrentLogHandler — Concurrent logging handler (drop-in replacement for RotatingFileHandler) Python 2.6+](https://pypi.python.org/pypi/ConcurrentLogHandler)
