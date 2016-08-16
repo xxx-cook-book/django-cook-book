@@ -73,23 +73,25 @@ except ImportError:
 * Tasks
   * Functions
 
-    ```python
-    def django_q_test_func(value):
-        for i in range(1, value + 1):
-            print i
-            time.sleep(1)
-        return 'Success'
+    * test_func.py
 
-    def print_result(task):
-        print(task.result)
-    ```
+      ```python
+      def django_q_test_func(value):
+          for i in range(1, value + 1):
+              print i
+              time.sleep(1)
+          return 'Success'
+
+      def print_result(task):
+          print(task.result)
+      ```
 
   * Just Async Exec
 
     ```python
     from django_q.tasks import async
 
-    async('django_q_test_func', 10)
+    async('test_func.django_q_test_func', 10)
     ```
 
     * qcluster
@@ -114,7 +116,7 @@ except ImportError:
     ```python
     from django_q.tasks import async
 
-    taskid = async('django_q_test_func', 10)
+    taskid = async('test_func.django_q_test_func', 10)
     # 0a364fb6faad47a89523d1013ca8ad59
     ```
 
@@ -132,7 +134,7 @@ except ImportError:
     ```python
     from django_q.tasks import async
 
-    taskid = async('django_q_test_func', 10, hook='print_result')
+    taskid = async('test_func.django_q_test_func', 10, hook='test_func.print_result')
     ```
 
     * qcluster
@@ -157,6 +159,54 @@ except ImportError:
   * TODO
 
 ## Admin
+
+## ``String`` vs. ``Instance``
+
+```python
+# Get the function from the task
+logger.info(_('{} processing [{}]').format(name, task['name']))
+f = task['func']
+# if it's not an instance try to get it from the string
+if not callable(f):
+    try:
+        module, func = f.rsplit('.', 1)
+        m = importlib.import_module(module)
+        f = getattr(m, func)
+    except (ValueError, ImportError, AttributeError) as e:
+        result = (e, False)
+        if rollbar:
+            rollbar.report_exc_info()
+```
+
+* Right
+
+  ```python
+  async('test_func.django_q_test_func', 10)
+
+  or
+
+  from test_func import django_q_test_func
+  async(django_q_test_func, 10)
+  ```
+
+* Wrong
+
+  ```python
+  from test_func import django_q_test_func
+  async('django_q_test_func', 10)
+  # module, func = f.rsplit('.', 1)
+  # 19:08:58 [Q] ERROR Failed [xxx] - need more than 1 value to unpack
+  ```
+
+* Solution
+
+  ```python
+  f = locals().get(f)
+  if not f:
+      module, func = f.rsplit('.', 1)
+      m = importlib.import_module(module)
+      f = getattr(m, func)
+  ```
 
 ## Redis Connect from Django Q
 
