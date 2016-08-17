@@ -50,7 +50,9 @@
       * [RotatingFileHandler](Logs/Handlers/FileHandler/rotating-file-handler.md)
       * [TimedRotatingFileHandler](Logs/Handlers/FileHandler/timed-rotating-file-handler.md)
       * [WatchedFileHandler](Logs/Handlers/FileHandler/watched-file-handler.md)
-    * [RedisHandler](Logs/Handlers/RedisHandler/redis-handler.md)
+    * RedisHandler
+      * [RedisHandler](Logs/Handlers/RedisHandler/redis-handler.md)
+      * [RedisListHandler](Logs/Handlers/RedisHandler/redis-list-handler.md)
     * [SocketHandler](Logs/Handlers/SocketHandler/socket-handler.md)
     * [StreamHandler](Logs/Handlers/StreamHandler/stream-handler.md)
 * [Middlewares](Middlewares/README.md)

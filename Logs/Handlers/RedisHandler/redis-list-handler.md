@@ -27,9 +27,9 @@
       'handlers': {
           'logit': {
               'level': 'DEBUG',
-              'class': 'rlog.RedisHandler',
+              'class': 'rlog.RedisListHandler',
               'redis_client': REDIS_CACHE,
-              'channel': 'django-logit',
+              'key': 'django:logit',
               'formatter': 'verbose',
           },
       },
@@ -57,9 +57,9 @@
         REDIS_CACHE = redis_connect(REDIS.get('default', {}))
         DJLOGIT = {
             'level': 'DEBUG',
-            'class': 'rlog.RedisHandler',
+            'class': 'rlog.RedisListHandler',
             'redis_client': REDIS_CACHE,
-            'channel': 'django-logit',
+            'key': 'django:logit',
             'formatter': 'verbose',
         }
     except ImportError:
@@ -94,10 +94,6 @@
         },
     }
     ```
-
-## Problems
-
-* Logs Missing If No Subscribe When Publish
 
 ## References
 
