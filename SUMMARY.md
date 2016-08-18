@@ -91,7 +91,8 @@
   * [HttpResponse](Responses/HttpResponse.md)
   * [JsonResponse](Responses/JsonResponse.md)
   * StreamingHttpResponse
-* Settings
+* [Settings](Settings/README.md)
+  * [ALLOWED_HOSTS](Settings/allowed-hosts.md)
 * [Signals](Signals/README.md)
 * [Subcommands](Subcommands/README.md)
   * [BaseCommand](Subcommands/BaseCommand.md)
