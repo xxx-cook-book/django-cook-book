@@ -110,6 +110,7 @@ Out[11]: False
           pattern == host
       )
   ```
+
 ## ``Domain Name Mapping`` vs. ``Nginx`` vs. ``ALLOWED_HOSTS`` 
 ##### *Domain Name Mapping*
 
