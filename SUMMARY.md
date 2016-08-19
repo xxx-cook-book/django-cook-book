@@ -90,6 +90,7 @@
   * [Http404](Responses/Http404.md)
   * [HttpResponse](Responses/HttpResponse.md)
   * [JsonResponse](Responses/JsonResponse.md)
+    * [DjangoJSONEncoder](Responses/DjangoJSONEncoder.md)
   * StreamingHttpResponse
 * [Settings](Settings/README.md)
   * [ALLOWED_HOSTS](Settings/allowed-hosts.md)
