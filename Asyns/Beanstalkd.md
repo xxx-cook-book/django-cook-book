@@ -268,6 +268,7 @@ client.call('beanstalk_example.background_counting', '5', delay=120, ttr=TTR)
   ```
 
   * [Beanstalkd (via pheanstalk) allowing duplicate, simultaneous reserves?](http://stackoverflow.com/questions/15468850/beanstalkd-via-pheanstalk-allowing-duplicate-simultaneous-reserves)
+  * [Cannot delete a job #255](https://github.com/kr/beanstalkd/issues/255)
 
 ## References
 
