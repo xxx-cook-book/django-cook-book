@@ -59,7 +59,7 @@
 
   ```shell
   [program:rlog]
-  command=command=/home/paiai/env/bin/python /home/paiai/work/pai2/manage.py rlistlog --key=django:logit:pai2 --filename=/tmp/pai2.logit.log
+  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
   autostart=true
   autorestart=true
   startretries=3
@@ -67,10 +67,10 @@
   stopsignal=QUIT
   stdout_logfile=/var/log/supervisor_rlog_access.log
   stderr_logfile=/var/log/supervisor_rlog_error.log
-  user=paiai
+  user=diors
   ```
 
-  * ``python /home/paiai/work/pai2/manage.py rlistlog --key=django:logit:pai2 --filename=/tmp/pai2.logit.log`` cause ``ImportError: No module named django.core.management``
+  * ``python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log`` cause ``ImportError: No module named django.core.management``
 
 * Supervisorctl
 
@@ -149,12 +149,33 @@
 
   *Tips: Supervisor will include files when started*
 
+  *Tips: Configuration Dir: ``/home/diors/supervisor/``*
+
+  *Tips: Log Dir: ``/home/diors/supervisorlog/``*
+
+  *Tips: Create Above Dir if Not Exists*
+
 
 * Start Supervisor
 
   ```shell
   supervisord  # Default /etc/supervisord.conf
   supervisord -c /home/diors/supervisord.conf  # Specify the configuration file location
+  ```
+
+* ``/home/diors/supervisor/rlog.ini``
+
+  ```shell
+  [program:rlog]
+  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
+  autostart=true
+  autorestart=true
+  startretries=3
+  exitcodes=0,1,2
+  stopsignal=QUIT
+  stdout_logfile=/home/diors/supervisorlog/supervisor_rlog_access.log
+  stderr_logfile=/home/diors/supervisorlog/supervisor_rlog_error.log
+  user=diors
   ```
 
 * Enter Supervisorctl
@@ -306,16 +327,16 @@ password = pass # Basic auth password
 
   ```shell
   # rlog
-  command=command=/home/paiai/env/bin/python /home/paiai/work/pai2/manage.py rlistlog --key=django:logit:pai2 --filename=/tmp/pai2.logit.log
+  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
 
   # django_q
-  command=/home/paiai/env/bin/python /home/paiai/work/pai2/manage.py qcluster
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
   ```
 
 * uWSGI
 
   ```shell
-  command=/home/paiai/env/bin/uwsgi --ini /home/paiai/work/pai2/pai2/uwsgi/pai2.ini
+  command=/home/diors/env/bin/uwsgi --ini /home/diors/work/tt4it/tt4it/uwsgi/tt4it.ini
   ```
 
 * Gunicorn
