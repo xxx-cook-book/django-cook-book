@@ -209,6 +209,7 @@
     alias supervisorctl='supervisorctl -c /home/diors/supervisord.conf'
     # Supervisor End
     ```
+    *Tips: If not have effect, exec ``source ~/.bashrc``*
 
   * Commands
 
