@@ -211,6 +211,15 @@
     ```
     *Tips: If not have effect, exec ``source ~/.bashrc``*
 
+    * ``http://localhost:9001 refused connection``
+
+      ```shell
+      $ supervisorctl restart kuaihongbao
+      http://localhost:9001 refused connection
+      ```
+
+      * [Supervisorctl not respecting my configuration](http://stackoverflow.com/questions/17005404/supervisorctl-not-respecting-my-configuration)
+
   * Commands
 
     ```shell
