@@ -95,6 +95,13 @@
     }
     ```
 
+
+* Save Logs
+
+  ```shell
+  python manage.py rlog [channel] [filename] [handler] [when] [maxBytes] [backupCount] [debug]
+  ```
+
 ## Problems
 
 * Logs Missing If No Subscribe When Publish

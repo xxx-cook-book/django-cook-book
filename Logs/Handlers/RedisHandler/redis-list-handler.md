@@ -95,6 +95,13 @@
     }
     ```
 
+
+* Save Logs
+
+  ```shell
+  python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes] [backupCount] [debug]
+  ```
+
 ## References
 
 [1] lobziik@Github, [rlog — Small handler and formatter for using python logging with Redis](https://github.com/lobziik/rlog)
