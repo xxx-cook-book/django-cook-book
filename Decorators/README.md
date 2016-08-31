@@ -20,11 +20,9 @@ def xxx(func):
   def foo(request):
       # do something
   ```
+  *Tips: equals to ``xxx(foo)(request)``*
 
-
-## Support Parameters
-
-#### 1st
+## Just Support Parameters
 
 ```python
 def xxx(param1=None):
@@ -51,8 +49,9 @@ def xxx(param1=None):
   def bar(request):
       # do something
   ```
+  *Tips: equals to ``xxx(param1)(foo)(request)``* 
 
-#### 2nd
+## Support Parameters Or Not
 
 ```python
 def xxx(func=None, param1=None):
@@ -64,9 +63,9 @@ def xxx(func=None, param1=None):
         return returned_wrapper
 
     if not func:
-        def foo(func):
+        def decorator2(func):
             return decorator(func)
-        return foo
+        return decorator2
 
     return decorator(func)
 ```
@@ -82,6 +81,6 @@ def xxx(func=None, param1=None):
   def bar(request):
       # do something
   ```
+  *Tips: equals to ``xxx(param1)(foo)(request)`` and ``xxx(bar)(request)``* 
 
 ## References
-

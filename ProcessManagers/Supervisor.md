@@ -355,7 +355,22 @@ password = pass # Basic auth password
   TODO
   ```
 
-  Tips: ``Daemon`` of ``Gunicorn`` should set ``False``
+  *Tips: ``Daemon`` of ``Gunicorn`` should set ``False``*
+
+* Gogs
+
+  ```shell
+  directory=/home/diors/gogs/
+  command=/home/diors/gogs/gogs web
+  environment=HOME="/home/diors", USER="diors"
+  ```
+  * environment
+    * [supervisor管理gogs,需要增加environment=HOME="xxx",USER="xxx" #1695](https://github.com/gogits/gogs/issues/1695)
+  * directory
+    * Error: `[Macaron] PANIC: session(start): mkdir data: permission denied`
+    * Causes: Gogs creates `data` subdirectory at the same directory where Gogs binary is located.
+    * Solution: make sure Gogs has permission to create subdirectory at that directory.
+    * [Troubleshooting](https://gogs.io/docs/intro/troubleshooting)
 
 ## References
 

@@ -114,6 +114,10 @@ from logit import logit
 @logit
 def xxx(request):
     xxx
+    
+@logit(body=True, res=True)
+def ooo(request):
+    ooo
 ```
 Then the logs will be stored in logfile /tmp/logit.log
 
