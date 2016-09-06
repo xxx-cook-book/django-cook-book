@@ -174,7 +174,7 @@
 * Start Worker
 
   ```shell
-  python manage.py beanstalk_worker -w 5
+  python manage.py beanstalk_worker -w 5 -l debug
   ```
   * ``One Server`` vs. ``Multi Server``
     * If ``Multi Server`` may cause ``Multi Server get Same Job``, lead to ``CommandFailed``
@@ -213,6 +213,13 @@ client.call('beanstalk_example.background_counting', '5', delay=120, ttr=TTR)
     Out[2]: 120
     ```
 
+## Logger
+
+```python
+logger = logging.getLogger('django_beanstalkd')
+logger.info('ooo')
+```
+
 ## Problems
 
 * Delayed Job Not Execute
@@ -220,7 +227,6 @@ client.call('beanstalk_example.background_counting', '5', delay=120, ttr=TTR)
   * [Beanstalkd “delayed job” doesn't execute](http://stackoverflow.com/questions/26547091/beanstalkd-delayed-job-doesnt-execute)
 
   * [Beanstalkd Queue - Delayed jobs not getting processed](http://laravel.io/forum/02-23-2014-beanstalkd-queue-delayed-jobs-not-getting-processed)
-
 
 * SocketError
 

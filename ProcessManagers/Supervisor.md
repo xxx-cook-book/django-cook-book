@@ -341,6 +341,9 @@ password = pass # Basic auth password
 
   # django_q
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
+
+  # beanstalk_worker
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
   ```
 
 * uWSGI
@@ -372,9 +375,48 @@ password = pass # Basic auth password
     * Solution: make sure Gogs has permission to create subdirectory at that directory.
     * [Troubleshooting](https://gogs.io/docs/intro/troubleshooting)
 
+## Logs
+
+* Print
+  * [stdout not being captured #13](https://github.com/Supervisor/supervisor/issues/13)
+    * Flush each stream after writing like `sys.stdout.flush()` or run with the streams unbuffered using`python -u`.
+
+* Logging
+
+  ```python
+  logger = logging.getLogger('xxx')
+  logger.info('ooo')
+  ```
+
+* Multi Process
+
+  ```shell
+  # beanstalk_worker
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
+
+  # Process
+  diors    27842 16899  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+  diors    27852 27842  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+  diors    27853 27842  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+  ```
+
+  * Python logging is not process-safe, so when start ``5`` workers for beanstalk, will miss some logs.
+
+    ```shell
+    # Testit ``-w 1``/``-w 2``
+    for i in range(8): client.call('beanstalkd.background_counting', str(i))
+    ```
+
+  * When ``restart``, only master process will be killed.
+
+    ```shell
+    diors    27852 1  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+    diors    27853 1  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+    ```
+
 ## References
 
-[1] Supervisord@TT4IT, [Supervisor process control system for UNIX](http://tt4it.com/resources/discuss/154/)
+[1] Supervisord@TT4IT, [Supervisord — Supervisor process control system for UNIX](http://tt4it.com/resources/discuss/154/)
 
 [2] DigitalOcean, [How To Install and Manage Supervisor on Ubuntu and Debian VPS](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
 

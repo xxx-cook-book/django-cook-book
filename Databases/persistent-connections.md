@@ -83,11 +83,11 @@ DATABASES = {
 
   * Reasons
 
-    * uWSGI start
+    * ``uWSGI start``
 
       * The value of ``CONN_MAX_AGE`` is more than the value of DB's IDLE/TIMEOUT
 
-    * python manage.py shell
+    * ``python manage.py shell``
 
       * Old django would close every connection right away, django 1.6 checks with CONN_MAX_AGE
 
@@ -106,40 +106,37 @@ DATABASES = {
 
   * Solutions
 
-    * uWSGI start
+    * ``uWSGI start``
 
       * Set the value of ``CONN_MAX_AGE`` less than the value of DB's IDLE/TIMEOUT
 
-    * python manage.py shell
+    * ``python manage.py shell``
 
       * Close the connection when you know that your program is going to be idle for a long time
 
         ```python
-        try:
-            from django.db import close_old_connections as close_connection
-        except ImportError:
-            from django.db import close_connection
+        from django_six import close_old_connections
 
-        close_connection()
+        close_old_connections()
 
         # Some Query Codes
 
-        close_connection()
+        close_old_connections()
         ```
 
         * https://github.com/django/django/blob/fc94944183f1f1325824ee0ef1f49d737ec86d4a/django/db/__init__.py#L101-L112
         * close_connection is superseded by close_old_connections. RemovedInDjango18Warning
-
+        * [Django-six — Django compatibility library](https://github.com/django-xxx/django-six)
 
 * Too many connections
 
   * Reasons
 
-    * uWSGI start
+    * ``uWSGI start``
 
       * One uWSGI Thread One Connection, by default uWSGI starts with a single process and a single thread
 
-      * ```
+        ```
         # number of worker processes
         processes       = 10
         # number of threads for each worker processes
@@ -148,7 +145,7 @@ DATABASES = {
 
       * connections = processes * threads = 10 * 5 = 50
 
-    * python manage.py runserver
+    * ``python manage.py runserver``
 
       * The development server creates a new thread for each request it handles
 
