@@ -379,12 +379,13 @@ password = pass # Basic auth password
 
 * Print
   * [stdout not being captured #13](https://github.com/Supervisor/supervisor/issues/13)
-    * Flush each stream after writing like `sys.stdout.flush()` or run with the streams unbuffered using`python -u`.
+    * Flush each stream after writing like `sys.stdout.flush()` or run with the streams unbuffered using `python -u`
 
 * Logging
 
   ```python
   logger = logging.getLogger('xxx')
+  logger.addHandler(logging.StreamHandler())
   logger.info('ooo')
   ```
 

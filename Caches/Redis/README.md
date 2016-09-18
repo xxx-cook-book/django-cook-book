@@ -75,6 +75,7 @@ r = settings.REDIS_CACHE
 ## Problems
 
 * If conf not have db, will raise ``KeyError: 'db'``
+  * [fix bug: KeyError for description_format #768](https://github.com/andymccurdy/redis-py/pull/768)
 
 ## References
 

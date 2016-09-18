@@ -62,6 +62,8 @@
 * [Models](Models/README.md)
   * [Abstract Base Classes](Models/abstract-base-classes.md)
   * PrimaryKey/ForeignKey/Index/Unique
+    * db_index/index_together
+    * unique/unique_together
   * [Fields](Models/Fields/README.md)
     * [JSONField](Models/Fields/JSONField.md)
     * [ShortUUIDField](Models/Fields/ShortUUIDField.md)
