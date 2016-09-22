@@ -415,6 +415,53 @@ password = pass # Basic auth password
     diors    27853 1  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
     ```
 
+## Supervisord.log
+
+* exited
+  * ``exit status 0``
+
+  * ``exit status 1; expected``
+
+    * Raise Error In Codes
+
+  * ``exit status 1; not expected``
+
+  * ``terminated by SIGQUIT``
+
+    * stop xxx
+
+      ```
+      waiting ==> stopped
+      ```
+
+    * restart xxx
+
+      ```
+      waiting ==> stopped ==> spawned ==> success
+      ```
+
+    * xxx
+
+  * ``terminated by SIGKILL; not expected``
+
+    * kill -9 xxx
+
+      ```
+      exited ==> spawned ==> success
+      ```
+
+    * Other Condition Lead To Process Killed
+
+      * [Who “Killed” my process and why?](http://stackoverflow.com/questions/726690/who-killed-my-process-and-why)
+
+      * [Ubuntu] ``sudo vim /var/log/kern.log``
+
+        ```shell
+        Sep 21 07:36:02 iZ28e73hi9aZ kernel: [37656975.398263] Out of memory: Kill process 18738 (python) score 429 or sacrifice child
+        Sep 21 07:36:02 iZ28e73hi9aZ kernel: [37656975.399284] Killed process 18738 (python) total-vm:1760008kB, anon-rss:1622680kB, file-rss:1048kB
+        ```
+      * [References: Leaking Memory](https://xxx-cook-book.gitbooks.io/django-cook-book/content/Performances/MEM/leaking-memory.html)
+
 ## References
 
 [1] Supervisord@TT4IT, [Supervisord — Supervisor process control system for UNIX](http://tt4it.com/resources/discuss/154/)
