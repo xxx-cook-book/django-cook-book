@@ -111,6 +111,11 @@
 * [URLs](URLs/README.md)
   * [Pass Extra Params to Views](URLs/pass-extra-params-to-views.md)
 
+## Solution
+
+* [Pagination](Solutions/Pagination.md)
+* [Verification Code](Solutions/verification-code.md)
+
 ## Appendix
 
 * [Process Managers](ProcessManagers/README.md)
