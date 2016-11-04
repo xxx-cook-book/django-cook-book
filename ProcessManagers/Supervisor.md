@@ -167,7 +167,7 @@
 
   ```shell
   [program:rlog]
-  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
   autostart=true
   autorestart=true
   startretries=3
@@ -244,6 +244,7 @@
 - `stdout_logfile` - The file to write any regular output.
 - `user` - The user the process is run as.
 - `environment` - Environment variables to pass to the process.
+- [``more detail``](http://supervisord.org/configuration.html)
 
 *Tips: Supervisord won't create a directory for logs if they do not exist*
 
@@ -337,10 +338,11 @@ password = pass # Basic auth password
 
   ```shell
   # rlog
-  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
 
   # django_q
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
+  stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
 
   # beanstalk_worker
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug

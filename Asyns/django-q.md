@@ -69,7 +69,6 @@ except ImportError:
     $ python manage.py qinfo
     ```
 
-
 * Tasks
   * Functions
 
@@ -157,6 +156,38 @@ except ImportError:
 
 * Schedules
   * TODO
+
+## Supervisor
+
+```python
+[program:djangoq]
+command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
+autostart=true
+autorestart=true
+startretries=3
+exitcodes=0,1,2
+stopsignal=INT
+stdout_logfile=/home/diors/supervisorlog/supervisor_djangoq_access.log
+stderr_logfile=/home/diors/supervisorlog/supervisor_djangoq_error.log
+user=diors
+```
+
+* ``stopsignal=QUIT`` can't kill as expect
+
+* Django Q stop
+
+  ```python
+  signal.signal(signal.SIGTERM, self.sig_handler)
+  signal.signal(signal.SIGINT, self.sig_handler)
+
+  def sig_handler(self, signum, frame):
+      logger.debug(_('{} got signal {}').format(current_process().name, Conf.SIGNAL_NAMES.get(signum, 'UNKNOWN')))
+      self.stop()
+  ```
+
+  * [django-q/django_q/cluster.py](https://github.com/Brightcells/django-q/blob/master/django_q/cluster.py#L48)
+
+* [Examples of Program Configurations —— Postgres 8.X](http://supervisord.org/subprocess.html#postgres-8-x)
 
 ## Admin
 
