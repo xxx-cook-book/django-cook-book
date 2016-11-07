@@ -31,6 +31,12 @@ In [6]: with transaction.atomic():
       return response(ProfileStatusCode.Profile_NOT_FOUND)
   ```
 
+* create()
+
+  ```python
+  profile = Profile.objects.select_for_update().create(uid=uid)
+  ```
+
 * get_or_create()
 
   ```python
