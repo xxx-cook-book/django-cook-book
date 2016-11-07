@@ -17,24 +17,24 @@ In [6]: with transaction.atomic():
 
   ```python
   try:
-      customer = CustomerAccountInfo.objects.select_for_update().filter(account_id=account_id)[0]
+      profile = Profile.objects.select_for_update().filter(uid=uid)[0]
   except IndexError:
-      return response(CustomerStatusCode.CUSTOMER_NOT_FOUND)
+      return response(ProfileStatusCode.Profile_NOT_FOUND)
   ```
 
 * get()
 
   ```
   try:
-      customer = CustomerAccountInfo.objects.select_for_update().get(account_id=account_id)
-  except CustomerAccountInfo.DoesNotExist:
-      return response(CustomerStatusCode.CUSTOMER_NOT_FOUND)
+      profile = Profile.objects.select_for_update().get(uid=uid)
+  except Profile.DoesNotExist:
+      return response(ProfileStatusCode.Profile_NOT_FOUND)
   ```
 
 * get_or_create()
 
   ```python
-  customer, created = CustomerAccountInfo.objects.select_for_update().get_or_create(app_id=app.app_id, phone=phone, user_id=user_id)
+  profile, created = Profile.objects.select_for_update().get_or_create(uid=uid)
   ```
 
 ## References
