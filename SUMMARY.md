@@ -95,6 +95,7 @@
   * [HttpResponse](Responses/HttpResponse.md)
   * [JsonResponse](Responses/JsonResponse.md)
     * [DjangoJSONEncoder](Responses/DjangoJSONEncoder.md)
+    * [Encapsulation](Responses/Encapsulation.md)
   * StreamingHttpResponse
 * [Settings](Settings/README.md)
   * [ALLOWED_HOSTS](Settings/allowed-hosts.md)

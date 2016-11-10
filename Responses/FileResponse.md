@@ -34,8 +34,8 @@ See [django/core/handlers/wsgi.py](https://github.com/django/django/blob/master/
 
 ```python
 if getattr(response, 'file_to_stream', None) is not None and environ.get('wsgi.file_wrapper'):
-            response = environ['wsgi.file_wrapper'](response.file_to_stream)
-        return response
+    response = environ['wsgi.file_wrapper'](response.file_to_stream)
+return response
 ```
 ## Before Django 1.7
 
