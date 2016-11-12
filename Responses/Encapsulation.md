@@ -34,18 +34,18 @@ from django.http import JsonResponse
 from utils.error.errno_utils import StatusCodeField
 
 
-def response_data(status_code=200, message=None, description=None, data={}):
-    return {
+def response_data(status_code=200, message=None, description=None, data={}, **kwargs):
+    return dict({
         'status': status_code,
         'message': message,
         'description': description,
         'data': data,
-    }
+    }, **kwargs)
 
 
-def response(status_code=200, message=None, description=None, data={}):
+def response(status_code=200, message=None, description=None, data={}, **kwargs):
     message, description = (message or status_code.message, description or status_code.description) if isinstance(status_code, StatusCodeField) else (message, description)
-    return JsonResponse(response_data(status_code, message, description, data), safe=False)
+    return JsonResponse(response_data(status_code, message, description, data, **kwargs), safe=False)
 ```
 
 ## Usage
