@@ -155,7 +155,7 @@ def xxx(request):
     except Exception as e:
         loggerit(name, 'error', e.message)
 ```
-* Why try ``logger.debug(request.body)``
+* Why try...except... ``logger.debug(request.body)``
   * Sometimes access ``request.body`` will raise error
   * [Exception: You cannot access body after reading from request's data stream](http://stackoverflow.com/questions/19581110/exception-you-cannot-access-body-after-reading-from-requests-data-stream)
 

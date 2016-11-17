@@ -337,6 +337,10 @@ password = pass # Basic auth password
 * Python manage.py
 
   ```shell
+  # runserver
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py runserver 0.0.0.0:9999
+  stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+
   # rlog
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
 
