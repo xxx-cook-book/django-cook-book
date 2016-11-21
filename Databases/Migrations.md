@@ -62,6 +62,11 @@ _New In Django 1.7_
       uid = ShortUUIDField(_(u'uid'), max_length=255, help_text=u'User UUID', db_index=True)
       ```
 
+* No changes detected
+
+  * ``python manage.py makemigrations`` - ``No changes detected``
+  * ``python manage.py makemigrations app_name`` - ``Changes detected``
+
 #### South
 
 * Conflict

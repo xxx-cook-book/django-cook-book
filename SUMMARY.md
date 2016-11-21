@@ -67,9 +67,13 @@
   * [Fields](Models/Fields/README.md)
     * [JSONField](Models/Fields/JSONField.md)
     * [ShortUUIDField](Models/Fields/ShortUUIDField.md)
+  * [Options](Models/Options/README.md)
+    * abstract
+    * db_table
+    * [managed](Models/Options/managed.md)
 * [Performances](Performances/README.md)
-  * [MEM](Performances/MEM/README.md)
-    * [Leaking Memory](Performances/MEM/leaking-memory.md)
+  * [Memory](Performances/Memory/README.md)
+    * [Leaking Memory](Performances/Memory/leaking-memory.md)
 * [Queries](Queries/README.md)
   * [Extra/Aggregation](Queries/extra-aggregation.md)
   * [F Expression](Queries/FExpression.md)
@@ -108,6 +112,7 @@
   * [Built-in](TagsAndFilters/Built-in.md)
   * [DIY](TagsAndFilters/DIY.md)
 * Templates
+  * cached.Loader
 * Translations
 * [URLs](URLs/README.md)
   * [Pass Extra Params to Views](URLs/pass-extra-params-to-views.md)
