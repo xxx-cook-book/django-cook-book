@@ -26,7 +26,7 @@
   ```python
   # -*- coding: utf-8 -*-
 
-  # Redis 设置
+  # Redis Settings
   REDIS = {
       'default': {
           'HOST': '127.0.0.1',
@@ -37,7 +37,7 @@
       }
   }
 
-  # Redis 缓存时间设置
+  # Redis Expired Time Settings
   REDIS_EXPIRED_HALF_HOUR = 1800  # 0.5 * 60 * 60
   REDIS_EXPIRED_HOUR = 3600  # 60 * 60
   REDIS_EXPIRED_DAY = 86400  # 24 * 60 * 60
@@ -45,7 +45,6 @@
   REDIS_EXPIRED_MONTH = 2678400  # 31 * 24 * 60 * 60
   REDIS_EXPIRED_YEAR = 31622400  # 366 * 24 * 60 * 60
 
-  # End of settings.py
   try:
       from local_settings import *
   except ImportError:
