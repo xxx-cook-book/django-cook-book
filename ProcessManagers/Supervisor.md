@@ -59,7 +59,7 @@
 
   ```shell
   [program:rlog]
-  command=command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
+  command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
   autostart=true
   autorestart=true
   startretries=3
@@ -95,7 +95,6 @@
   supervisor> quit
   ```
 
-
 * Problems
 
   * [Errno 13] Permission denied
@@ -122,7 +121,6 @@
   ```shell
   pip install supervisor
   ```
-
 
 * Creating Configuration File
 
@@ -155,7 +153,6 @@
 
   *Tips: Create Above Dir if Not Exists*
 
-
 * Start Supervisor
 
   ```shell
@@ -185,7 +182,6 @@
   supervisorctl -c /home/diors/supervisord.conf  # Specify the configuration file location
   ```
 
-
 * Supervisorctl Commands
 
   ```shell
@@ -197,7 +193,6 @@
   $ supervisorctl -c /home/diors/supervisord.conf reread
   No config updates to processes
   ```
-
 
 * Alias
 
@@ -340,6 +335,8 @@ password = pass # Basic auth password
   # runserver
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py runserver 0.0.0.0:9999
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+  stopsignal=true
+  killasgroup=true
 
   # rlog
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
@@ -347,10 +344,14 @@ password = pass # Basic auth password
   # django_q
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+  stopsignal=true
+  killasgroup=true
 
   # beanstalk_worker
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+  stopsignal=true
+  killasgroup=true
   ```
 
 * uWSGI
@@ -420,6 +421,12 @@ password = pass # Basic auth password
     ```shell
     diors    27852 1  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
     diors    27853 1  0 18:17 ?        00:00:00 /home/diors/env/bin/python manage.py beanstalk_worker -w 2
+    ```
+  * Solution
+    ```shell
+    stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+    stopsignal=true
+    killasgroup=true
     ```
 
 ## Supervisord.log
