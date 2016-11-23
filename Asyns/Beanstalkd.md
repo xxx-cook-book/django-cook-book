@@ -79,36 +79,36 @@
     # To start the service:
     service beanstalkd start
     ```
-    * Error
+    *  Error
 
-      ```shell
-      $ service beanstalkd start
+       ```shell
+       $ service beanstalkd start
        * Starting in-memory queueing server  beanstalkd
-      beanstalkd not configured to start, please edit /etc/default/beanstalkd to enable
-      ```
+       beanstalkd not configured to start, please edit /etc/default/beanstalkd to enable
+       ```
 
-    * /etc/default/beanstalkd
+    *  /etc/default/beanstalkd
 
-      ```shell
-      ## Defaults for the beanstalkd init script, /etc/init.d/beanstalkd on
-      ## Debian systems. Append ``-b /var/lib/beanstalkd'' for persistent
-      ## storage.
-      BEANSTALKD_LISTEN_ADDR=0.0.0.0
-      BEANSTALKD_LISTEN_PORT=11300
-      DAEMON_OPTS="-l $BEANSTALKD_LISTEN_ADDR -p $BEANSTALKD_LISTEN_PORT"
-      ## Uncomment to enable startup during boot.
-      START=yes
-      ```
+       ```shell
+       ## Defaults for the beanstalkd init script, /etc/init.d/beanstalkd on
+       ## Debian systems. Append ``-b /var/lib/beanstalkd'' for persistent
+       ## storage.
+       BEANSTALKD_LISTEN_ADDR=0.0.0.0
+       BEANSTALKD_LISTEN_PORT=11300
+       DAEMON_OPTS="-l $BEANSTALKD_LISTEN_ADDR -p $BEANSTALKD_LISTEN_PORT"
+       ## Uncomment to enable startup during boot.
+       START=yes
+       ```
 
-    * Start
+    *  Start
 
-      ```shell
-      $ service beanstalkd start
+       ```shell
+        $ service beanstalkd start
        * Starting in-memory queueing server  beanstalkd                                                     start-stop-daemon: unable to open pidfile '/var/run/beanstalkd.pid' for writing (Permission denied)
                                                                                                      [fail]
-      $ sudo service beanstalkd start
+       $ sudo service beanstalkd start
        * Starting in-memory queueing server  beanstalkd                                              [ OK ]
-      ```
+       ```
 
   * Stop
 
@@ -130,7 +130,6 @@
     # To check the status:
     service beanstalkd status
     ```
-
 
 ## django-beanstalkd
 
@@ -158,7 +157,6 @@
     # My beanstalkd server
     BEANSTALK_SERVER = '127.0.0.1:11300'  # the default value, change 127.0.0.1 to ip
     ```
-
 
 * Register Jobs
 
@@ -263,7 +261,6 @@ logger.info('ooo')
         raise SocketError(err)
     SocketError: [Errno 104] Connection reset by peer
     ```
-
 
 * CommandFailed
 
