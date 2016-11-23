@@ -335,7 +335,7 @@ password = pass # Basic auth password
   # runserver
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py runserver 0.0.0.0:9999
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-  stopsignal=true
+  stopasgroup=true
   killasgroup=true
 
   # rlog
@@ -344,13 +344,13 @@ password = pass # Basic auth password
   # django_q
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-  stopsignal=true
+  stopasgroup=true
   killasgroup=true
 
   # beanstalk_worker
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
   stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-  stopsignal=true
+  stopasgroup=true
   killasgroup=true
   ```
 
@@ -425,7 +425,7 @@ password = pass # Basic auth password
   * Solution
     ```shell
     stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-    stopsignal=true
+    stopasgroup=true
     killasgroup=true
     ```
 
