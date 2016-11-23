@@ -349,7 +349,7 @@ password = pass # Basic auth password
 
   # beanstalk_worker
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
-  stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+  stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
   stopasgroup=true
   killasgroup=true
   ```
@@ -424,7 +424,8 @@ password = pass # Basic auth password
     ```
   * Solution
     ```shell
-    stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+    # stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
+    stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
     stopasgroup=true
     killasgroup=true
     ```
