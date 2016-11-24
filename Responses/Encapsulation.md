@@ -1,22 +1,20 @@
 # Encapsulation
 
+## StatusCode
+
+```shell
+pip install StatusCode
+```
+
+* [Python Status Code based on ``kkconst``](https://github.com/errorless/StatusCode)
+* [Define const field and const class, customize it as You Like (Python)](https://github.com/kaka19ace/kkconst)
+
 ## utils/error/error_utils.py
 
 ```python
 # -*- coding: utf-8 -*-
 
-from kkconst import BaseConst, ConstIntField
-
-
-class BaseStatusCode(BaseConst):
-    class Meta:
-        allow_duplicated_value = False  # Status_code should be no duplicated value
-
-
-class StatusCodeField(ConstIntField):
-    def __init__(self, status_code, message='', description=''):
-        ConstIntField.__init__(status_code, verbose_name=message, description=description)
-        self.message = message
+from StatusCode import BaseStatusCode, StatusCodeField
 
 
 class UserStatusCode(BaseStatusCode):
