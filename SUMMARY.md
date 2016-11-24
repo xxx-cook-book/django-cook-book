@@ -126,6 +126,9 @@
 
 * [Process Managers](ProcessManagers/README.md)
   * [Supervisor](ProcessManagers/Supervisor.md)
+* [Setting Ups](SettingUps/README.md)
+  * [Nginx & uWSGI](SettingUps/nginx-uwsgi.md)
+  * [Nginx & Gunicorn](SettingUps/nginx-gunicorn.md)
 * [VS.](VS./README.md)
   * [``exists()`` vs. ``get() + try/except``](VS./exists-or-get-try-except.md)
   * [``exists()`` vs. ``count()``](VS./exists-or-count.md)
