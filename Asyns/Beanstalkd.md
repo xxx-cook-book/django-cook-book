@@ -103,7 +103,7 @@
     *  Start
 
        ```shell
-        $ service beanstalkd start
+       $ service beanstalkd start
        * Starting in-memory queueing server  beanstalkd                                                     start-stop-daemon: unable to open pidfile '/var/run/beanstalkd.pid' for writing (Permission denied)
                                                                                                      [fail]
        $ sudo service beanstalkd start
@@ -184,6 +184,24 @@
 
   client = BeanstalkClient()
   client.call('beanstalk_example.background_counting', '5')
+  ```
+
+## Example
+
+* INSTALLED_APPS
+
+  ```python
+  INSTALLED_APPS = (
+      ...
+      'beanstalk_example',
+      ...
+  )
+  ```
+
+* python manage.py
+
+  ```shell
+  python manage.py beanstalk_example_client
   ```
 
 ## Start Order
