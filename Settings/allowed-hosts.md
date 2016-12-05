@@ -60,7 +60,6 @@ Out[11]: False
           raise DisallowedHost(msg)
   ```
 
-
 * django/http/request.py — validate_host
 
   ```python
@@ -88,7 +87,6 @@ Out[11]: False
       return False
   ```
 
-
 * django/utils/http.py — is_same_domain
 
   ```python
@@ -111,7 +109,16 @@ Out[11]: False
       )
   ```
 
+## ``DEBUG=True``
+
+```latex
+Changed in Django 1.10.3:
+In older versions, ALLOWED_HOSTS wasn’t checked if DEBUG=True. This was also changed in Django 1.9.11 and 1.8.16 to prevent a DNS rebinding attack.
+```
+* [DNS rebinding vulnerability when `DEBUG=True`](https://docs.djangoproject.com/en/1.10/releases/1.10.3/#dns-rebinding-vulnerability-when-debug-true)
+
 ## ``Domain Name Mapping`` vs. ``Nginx`` vs. ``ALLOWED_HOSTS`` 
+
 ##### *Domain Name Mapping*
 
 | Type | Origin | Record    | TTL        |
