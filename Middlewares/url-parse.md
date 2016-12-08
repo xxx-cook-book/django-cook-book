@@ -6,7 +6,7 @@
 
 ## Django Request
 
-* uri
+* Uri
 
   ```python
   request.build_absolute_uri()
@@ -14,7 +14,7 @@
 
   * [Request and response objects —— django.http.HttpRequest.build_absolute_uri](https://docs.djangoproject.com/en/1.9/ref/request-response/#django.http.HttpRequest.build_absolute_uri)
 
-* origin
+* Origin
 
   * Method One
 
@@ -46,7 +46,7 @@
             return None
     ```
 
-* protocol/scheme
+* Protocol/Scheme
 
   * Method One
 
@@ -65,7 +65,7 @@
     * _New In Django 1.7_
     * [Request and response objects —— django.http.HttpRequest.scheme](https://docs.djangoproject.com/en/1.7/ref/request-response/#django.http.HttpRequest.scheme)
 
-* host
+* Host
 
   ```python
   request.get_host()
@@ -73,7 +73,7 @@
 
   * [Request and response objects —— django.http.HttpRequest.get_host](https://docs.djangoproject.com/en/1.9/ref/request-response/#django.http.HttpRequest.get_host)
 
-* port
+* Port
 
   ```python
   request.get_port()
@@ -82,7 +82,7 @@
   * _New In Django 1.9_
   * [Request and response objects —— django.http.HttpRequest.get_port](https://docs.djangoproject.com/en/1.9/ref/request-response/#django.http.HttpRequest.get_port)
 
-* path
+* Path
 
   ```python
   request.get_full_path()

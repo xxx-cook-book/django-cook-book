@@ -16,8 +16,9 @@
 
   ```python
   INSTALLED_APPS = (
-      # other apps
+      ...
       'django_q',
+      ...
   )
   ```
 
