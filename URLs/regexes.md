@@ -4,7 +4,7 @@
 
 * General
 
-  ```python
+  ```
   Choice
       Sequence | Sequence | ...
   Sequence
