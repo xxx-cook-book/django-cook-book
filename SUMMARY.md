@@ -116,6 +116,7 @@
 * Translations
 * [URLs](URLs/README.md)
   * [Pass Extra Params to Views](URLs/pass-extra-params-to-views.md)
+  * [Regexes](URLs/regexes.md)
 
 ## Solution
 
