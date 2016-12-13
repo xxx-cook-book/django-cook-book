@@ -104,6 +104,7 @@
 * [Settings](Settings/README.md)
   * [ALLOWED_HOSTS](Settings/allowed-hosts.md)
 * [Signals](Signals/README.md)
+* StaticFiles
 * [Subcommands](Subcommands/README.md)
   * [BaseCommand](Subcommands/BaseCommand.md)
 * [Tags and Filters](TagsAndFilters/README.md)
@@ -128,8 +129,11 @@
 * [Process Managers](ProcessManagers/README.md)
   * [Supervisor](ProcessManagers/Supervisor.md)
 * [Setting Ups](SettingUps/README.md)
-  * [Nginx & uWSGI](SettingUps/nginx-uwsgi.md)
-  * [Nginx & Gunicorn](SettingUps/nginx-gunicorn.md)
+  * WSGI
+    * Nginx & mod_wsig
+    * [Nginx & uWSGI](SettingUps/nginx-uwsgi.md)
+    * [Nginx & Gunicorn](SettingUps/nginx-gunicorn.md)
+  * ~~FastCGI - Deprecated since version 1.7 & Remove in version 1.9~~
 * [VS.](VS./README.md)
   * [``exists()`` vs. ``get() + try/except``](VS./exists-or-get-try-except.md)
   * [``exists()`` vs. ``count()``](VS./exists-or-count.md)
