@@ -67,6 +67,24 @@ r = settings.REDIS_CACHE
 # r.set('foo', 'bar')
 ```
 
+* Advanced Encapsulation
+
+  * utils/redis/connect.py
+
+    ```python
+    # -*- coding: utf-8 -*-
+
+    from django.conf import settings
+
+    r = settings.REDIS_CACHE
+    ```
+
+  * Usage
+
+    ```python
+    from utils.redis.connect import r
+    ```
+
 ## Usage
 
 * [Redis Cook Book](https://xxx-cook-book.gitbooks.io/redis-cook-book/content/Python/redis-py/)
