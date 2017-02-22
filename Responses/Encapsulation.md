@@ -28,8 +28,7 @@ class UserStatusCode(BaseStatusCode):
 # -*- coding: utf-8 -*-
 
 from django.http import JsonResponse
-
-from utils.error.errno_utils import StatusCodeField
+from StatusCode import StatusCodeField
 
 
 def response_data(status_code=200, message=None, description=None, data={}, **kwargs):
