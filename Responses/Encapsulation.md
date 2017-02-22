@@ -20,6 +20,9 @@ from StatusCode import BaseStatusCode, StatusCodeField
 class UserStatusCode(BaseStatusCode):
     """ User Relative StatusCode 4001xx """
     USER_NOT_FOUND = StatusCodeField(400101, 'User Not Found', description=u'用户不存在')
+
+# INVALID_XXX = StatusCodeField(xxxx00, 'Invalid XXX', description=u'非法XXX')
+# XXX_NOT_FOUND = StatusCodeField(xxxx01, 'XXX Not Found', description=u'XXX不存在')
 ```
 
 ## utils/error/response_utils.py
