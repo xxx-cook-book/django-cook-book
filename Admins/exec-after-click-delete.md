@@ -22,4 +22,8 @@ If you want to ``modify some fields`` or ``run some code`` after click ``Delete 
       	# Some Code to Run
   ```
 
-  ​
+* Tips
+
+  * ``obj.pk`` be ``None`` after ``obj.delete()`` executed
+
+
