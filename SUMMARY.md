@@ -2,11 +2,14 @@
 
 * [Introduction](README.md)
 * [Admins](Admins/README.md)
+  * Admin Actions
+    * Override Delete_selected()
   * [Copy An Object](Admins/copy-an-object.md)
   * [Display Extra Field](Admins/display-extra-field.md)
   * [Exec After Click Delete](Admins/exec-after-click-delete.md)
   * [Exec After Click Save](Admins/exec-after-click-save.md)
   * [Field Readonly After Save](Admins/field-readonly-after-save.md)
+  * [Filter User Owned Objects](Admins/filter-user-owned-objects.md)
 * [Asyns](Asyns/README.md)
   * [Beanstalkd](Asyns/Beanstalkd.md)
   * Celery
