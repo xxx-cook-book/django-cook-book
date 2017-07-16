@@ -15,7 +15,7 @@ The get_queryset method on a ModelAdmin returns a QuerySet of all model instance
     ```python
     class MyModelAdmin(admin.ModelAdmin):
         def get_queryset(self, request):
-            qs = super().get_queryset(request)
+            qs = super(MyModelAdmin, self).get_queryset(request)
             if request.user.is_superuser:
                 return qs
             return qs.filter(author=request.user)
