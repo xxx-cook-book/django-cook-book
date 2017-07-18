@@ -33,7 +33,13 @@ If you want to make a field ``editable before save`` and ``readonly after save``
         def get_readonly_fields(self, request, obj=None):
             if obj:  # editing an existing object
                 return self.readonly_fields + tuple(obj._meta.get_all_field_names())
+                # return self.readonly_fields + tuple(f.name for f in self.model._meta.fields)
+                # return self.readonly_fields + tuple(f.name for f in obj._meta.fields)
             return self.readonly_fields
     ```
+    * [get_all_field_names() removed in Django 1.10](https://docs.djangoproject.com/en/1.10/releases/1.10/#features-removed-in-1-10)
 
-    ​
+## References
+
+[1] yprez@StackOverflow, [Django admin - make all fields readonly](https://stackoverflow.com/questions/13817525/django-admin-make-all-fields-readonly)
+​

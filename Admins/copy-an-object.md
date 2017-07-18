@@ -16,5 +16,5 @@ obj_copy.save()  # initial save
 
 ## References
 
-[1] rprasad @ harvard.edu, [using the Django admin to copy an object](https://blogs.harvard.edu/rprasad/2012/08/24/using-django-admin-to-copy-an-object/)
+[1] rprasad@harvard.edu, [using the Django admin to copy an object](https://blogs.harvard.edu/rprasad/2012/08/24/using-django-admin-to-copy-an-object/)
 

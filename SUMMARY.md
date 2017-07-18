@@ -2,8 +2,10 @@
 
 * [Introduction](README.md)
 * [Admins](Admins/README.md)
-  * Admin Actions
+  * [Admin Actions](Admins/admin-actions.md)
     * Override Delete_selected()
+  * [Admin Methods](Admins/admin-methods.md)
+  * [Admin Options](Admins/admin-options.md)
   * [Copy An Object](Admins/copy-an-object.md)
   * [Display Extra Field](Admins/display-extra-field.md)
   * [Exec After Click Delete](Admins/exec-after-click-delete.md)

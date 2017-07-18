@@ -139,6 +139,15 @@ MANAGERS = ADMINS
 EMAIL_SUBJECT_PREFIX = u'[Django] '
 ```
 
+## Email Reports Server Error
+```
+When DEBUG is False, 
+Django will email the users listed in the ADMINS setting whenever your code raises an unhandled exception and results in an internal server error (HTTP status code 500). 
+This gives the administrators immediate notification of any errors. 
+The ADMINS will get a description of the error, a complete Python traceback, and details about the HTTP request that caused the error.
+```
+* [Email Reports Server Error](https://docs.djangoproject.com/en/dev/howto/error-reporting/#email-reports)
+
 ## References
 
 [1] Docs@DjangoProject, [Sending email](https://docs.djangoproject.com/en/dev/topics/email/)
