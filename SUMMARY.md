@@ -129,7 +129,7 @@
 * [Pagination](Solutions/Pagination.md)
 * [Verification Code](Solutions/verification-code.md)
 
-## Appendix
+## Appendix I
 
 * [Process Managers](ProcessManagers/README.md)
   * [Supervisor](ProcessManagers/Supervisor.md)
@@ -142,3 +142,9 @@
 * [VS.](VS./README.md)
   * [``exists()`` vs. ``get() + try/except``](VS./exists-or-get-try-except.md)
   * [``exists()`` vs. ``count()``](VS./exists-or-count.md)
+
+## Appendix II
+
+* [Design](Design/README.md)
+    * [Design](Design/lastrowid.md)
+
