@@ -42,6 +42,7 @@ In [6]: with transaction.atomic():
   ```python
   profile, created = Profile.objects.select_for_update().get_or_create(uid=uid)
   ```
+  * Tips: Kwargs for ``get_or_create`` should be unique. Use ``unique/unique_together``
 
 ## References
 
