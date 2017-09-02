@@ -68,7 +68,7 @@
 ## Settings.py
 ```python
 # File Settings
-FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880  # InMemoryUploadedFile Max Size, Default 2.5M, Current Setting 5M
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880  # InMemoryUploadedFile Max Size, Default 2.5 MB, Current Setting 5 MB
 FILE_UPLOAD_PERMISSIONS = 0o644  # TemporaryUploadedFile File Permissions, Default 0o600(-rw-------), Current Setting 0o644(-rw-r--r--)
 ```
 

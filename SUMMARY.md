@@ -85,6 +85,7 @@
   * [Group By](Queries/GroupBy.md)
   * Last/Latest
   * [Q Expression](Queries/QExpression.md)
+  * [Variable Field](Queries/variable-field.md)
   * Year/Month/Day
 * [Real-times](Real-times/README.md)
   * [Long Pooling](Real-times/LongPooling/README.md)
