@@ -1,5 +1,12 @@
 # Redis
 
+## Requirements
+```
+hiredis==0.2.0
+redis==2.10.6
+redis-extensions==1.1.1
+```
+
 ## Settings
 
 * func_settings.py
@@ -7,18 +14,18 @@
   ```python
   # -*- coding: utf-8 -*-
 
-  import redis
+  import redis_extensions as redis
 
   def redis_conf(conf):
       return {
           'host': conf.get('HOST', 'localhost'),
           'port': conf.get('PORT', 6379),
-          'password': '{}:{}'.format(conf.get('USER', ''), conf.get('PASSWORD', '')) if conf.get('USER') else '',
+          'password': '{0}:{1}'.format(conf.get('USER', ''), conf.get('PASSWORD', '')) if conf.get('USER') else '',
           'db': conf.get('db', 0),
       }
 
   def redis_connect(conf):
-      return redis.StrictRedis(connection_pool=redis.ConnectionPool(**redis_conf(conf)))
+      return redis.StrictRedisExtensions(connection_pool=redis.ConnectionPool(**redis_conf(conf)))
   ```
 
 * settings.py
@@ -36,14 +43,6 @@
           'db': 0,
       }
   }
-
-  # Redis Expired Time Settings
-  REDIS_EXPIRED_HALF_HOUR = 1800  # 0.5 * 60 * 60
-  REDIS_EXPIRED_HOUR = 3600  # 60 * 60
-  REDIS_EXPIRED_DAY = 86400  # 24 * 60 * 60
-  REDIS_EXPIRED_WEEK = 604800  # 7 * 24 * 60 * 60
-  REDIS_EXPIRED_MONTH = 2678400  # 31 * 24 * 60 * 60
-  REDIS_EXPIRED_YEAR = 31622400  # 366 * 24 * 60 * 60
 
   try:
       from local_settings import *
@@ -95,4 +94,5 @@ r = settings.REDIS_CACHE
   * [fix bug: KeyError for description_format #768](https://github.com/andymccurdy/redis-py/pull/768)
 
 ## References
+[1] redisclub/redis-extensions-py@Github, [Redis-extensions is a collection of custom extensions for Redis-py.](https://github.com/redisclub/redis-extensions-py)
 
