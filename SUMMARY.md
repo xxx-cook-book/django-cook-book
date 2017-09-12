@@ -138,7 +138,8 @@
   * [Supervisor](ProcessManagers/Supervisor.md)
 * [Setting Ups](SettingUps/README.md)
   * WSGI
-    * Nginx & mod_wsig
+    * Apache & mod_wsgi
+    * Nginx & mod_wsgi Refer: https://stackoverflow.com/questions/195534/in-production-apache-mod-wsgi-or-nginx-mod-wsgi
     * [Nginx & uWSGI](SettingUps/nginx-uwsgi.md)
     * [Nginx & Gunicorn](SettingUps/nginx-gunicorn.md)
   * ~~FastCGI - Deprecated since version 1.7 & Remove in version 1.9~~
@@ -149,5 +150,5 @@
 ## Appendix II
 
 * [Design](Design/README.md)
-    * [Design](Design/lastrowid.md)
+    * [lastrowid](Design/lastrowid.md)
 

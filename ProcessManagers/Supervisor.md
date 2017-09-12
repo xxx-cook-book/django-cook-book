@@ -115,6 +115,33 @@
       chmod=0766                       ; sockef file mode (default 0700)
       ```
 
+## yum
+
+* Installation
+  ```shell
+  sudo yum install supervisor
+  ```
+
+* Service
+
+  ```shell
+  $ sudo service supervisord start
+  Redirecting to /bin/systemctl start  supervisord.service
+  $ sudo service supervisord restart
+  Redirecting to /bin/systemctl restart  supervisord.service
+  $ ps -ef | grep supervisor
+  root     28383     1  0 16:51 ?        00:00:00 /usr/bin/python /usr/bin/supervisord -c /etc/supervisord.conf
+  $ sudo service supervisord stop
+  Redirecting to /bin/systemctl stop  supervisord.service
+  $ ps -ef | grep supervisor
+  ```
+
+* Configuration File
+  ```shell
+  $ cd /etc/supervisord.
+  supervisord.conf  supervisord.d/
+  ```
+
 ## PIP
 
 * Installation
