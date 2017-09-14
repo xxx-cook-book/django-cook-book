@@ -1,23 +1,47 @@
 # Pagination
 
-## page_utils.py
+## Page Utils
 
-```python
-from django.db.models.query import QuerySet
+* page_utils.py
 
-def pagination(queryset, page, num=10, strict=False):
-    """
-    Simple Pagination Funciton
-    :param queryset:
-    :param page:
-    :param num: number per page
-    :param strict: strict left number or not
-    :return: matched query, left number(default not strict)
-    """
-    start, end = num * (page - 1), num * page
-    return queryset[start: end], max(queryset.count() if isinstance(queryset, QuerySet) else len(queryset) - end, 0) if strict else len(queryset[end: end + 1])
+  ```python
+  from django.db.models.query import QuerySet
 
-```
+  def pagination(queryset, page, num=10, strict=False):
+      """
+      Simple Pagination Funciton
+      :param queryset:
+      :param page:
+      :param num: number per page
+      :param strict: strict left number or not
+      :return: matched query, left number(default not strict)
+      """
+      start, end = num * (page - 1), num * page
+      return queryset[start: end], max(queryset.count() if isinstance(queryset, QuerySet) else len(queryset) - end, 0) if strict else len(queryset[end: end + 1])
+  ```
+
+* django-paginator
+
+  * Installation
+
+    ```
+    pip install django-paginator2
+    ```
+
+  * Usage
+
+    ```
+    In [1]: from paginator import pagination
+
+    In [2]: pagination(range(100), 1)
+    Out[2]: ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1)
+
+    In [3]: pagination(range(100), 1, strict=True)
+    Out[3]: ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 90)
+
+    In [4]: pagination(range(100), 1, 20, strict=True)
+    Out[4]: ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 80)
+    ```
 
 ## settings.py
 
@@ -52,4 +76,6 @@ objs = [obj.data for obj in objs]
 ```
 
 ## References
+
+[1] django-xxx/django-paginator@Github, [Simple Django Paginator](https://github.com/django-xxx/django-paginator)
 
