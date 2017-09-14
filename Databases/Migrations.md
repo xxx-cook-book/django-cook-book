@@ -75,7 +75,7 @@ _New In Django 1.7_
   There is no South database module 'south.db.mysql' for your database. Please either choose a supported database, check for SOUTH_DATABASE_ADAPTER[S] settings, or remove South from INSTALLED_APPS.
   ```
 
-##  Before Django 1.7
+## Before Django 1.7
 
 #### South
 
@@ -158,6 +158,13 @@ _New In Django 1.7_
       ```shell
       python manage.py migrate app_name 0005 --fake
       ```
+
+## Problems
+
+* Problem after Migrate
+  ```shell
+  django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE6\\x95\\xB0\\xE6\\x8D\\xAE...' for column 'name' at row 1")
+  ```
 
 ## References
 
