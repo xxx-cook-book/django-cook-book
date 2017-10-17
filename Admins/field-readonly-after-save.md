@@ -42,4 +42,6 @@ If you want to make a field ``editable before save`` and ``readonly after save``
 ## References
 
 [1] yprez@StackOverflow, [Django admin - make all fields readonly](https://stackoverflow.com/questions/13817525/django-admin-make-all-fields-readonly)
+
+[2] django-xxx@Github, [django-admin — Django Admin Extensions](https://github.com/django-xxx/django-admin)
 ​

@@ -9,11 +9,13 @@
   * [Copy An Object](Admins/copy-an-object.md)
   * [Custom Change_list Filter](Admins/custom-change_list-filter.md)
   * [Custom Site_header](Admins/custom-site_header.md)
+  * [Disable Editing](Admins/disable-editing.md)
   * [Display Extra Field](Admins/display-extra-field.md)
   * [Exec After Click Delete](Admins/exec-after-click-delete.md)
   * [Exec After Click Save](Admins/exec-after-click-save.md)
   * [Field Readonly After Save](Admins/field-readonly-after-save.md)
   * [Filter User Owned Objects](Admins/filter-user-owned-objects.md)
+  * [Multistage Linkage](Admins/multistage-linkage.md)
 * [Asyns](Asyns/README.md)
   * [Beanstalkd](Asyns/Beanstalkd.md)
   * Celery
@@ -150,5 +152,5 @@
 ## Appendix II
 
 * [Design](Design/README.md)
-    * [lastrowid](Design/lastrowid.md)
+  * [lastrowid](Design/lastrowid.md)
 
