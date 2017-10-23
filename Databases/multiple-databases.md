@@ -37,7 +37,17 @@ python manage.py migrate --database=utf8mb4
 
 ## Using
 
-```python
-models.objects.using('utf8mb4').filter()
-```
+* Models
+  ```python
+  models.objects.using('utf8mb4').filter()
+  ```
+* Connections
+  ```python
+  from django.db import connections
+  connections['utf8mb4']
+  cursor = connection.cursor()
+  cursor.execute('raw_sql')
+  rows = cursor.fetchall()
+  ```
+  * https://github.com/django/django/blob/master/django/db/__init__.py#L21
 
