@@ -10,6 +10,7 @@
   * [Custom Change_list Filter](Admins/custom-change_list-filter.md)
   * [Custom Site_header](Admins/custom-site_header.md)
   * [Disable Editing](Admins/disable-editing.md)
+  * [Display Choice Value](Admins/display-choice-value.md)
   * [Display Extra Field](Admins/display-extra-field.md)
   * [Exec After Click Delete](Admins/exec-after-click-delete.md)
   * [Exec After Click Save](Admins/exec-after-click-save.md)
