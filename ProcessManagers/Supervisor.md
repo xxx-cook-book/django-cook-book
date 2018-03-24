@@ -64,7 +64,9 @@
   autorestart=true
   startretries=3
   exitcodes=0,1,2
-  stopsignal=QUIT
+  stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
+  stopasgroup=true
+  killasgroup=true
   stdout_logfile=/var/log/supervisor_rlog_access.log
   stderr_logfile=/var/log/supervisor_rlog_error.log
   user=diors
@@ -196,7 +198,9 @@
   autorestart=true
   startretries=3
   exitcodes=0,1,2
-  stopsignal=QUIT
+  stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
+  stopasgroup=true
+  killasgroup=true
   stdout_logfile=/home/diors/supervisorlog/supervisor_rlog_access.log
   stderr_logfile=/home/diors/supervisorlog/supervisor_rlog_error.log
   user=diors
@@ -361,24 +365,15 @@ password = pass # Basic auth password
   ```shell
   # runserver
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py runserver 0.0.0.0:9999
-  stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-  stopasgroup=true
-  killasgroup=true
 
   # rlog
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py rlistlog --key=django:logit:tt4it --filename=/tmp/tt4it.logit.log
 
   # django_q
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py qcluster
-  stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
-  stopasgroup=true
-  killasgroup=true
 
   # beanstalk_worker
   command=/home/diors/env/bin/python /home/diors/work/tt4it/manage.py beanstalk_worker -w 5 -l debug
-  stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
-  stopasgroup=true
-  killasgroup=true
   ```
 
 * uWSGI
@@ -451,6 +446,7 @@ password = pass # Basic auth password
     ```
   * Solution
     ```shell
+    # stopsignal=QUIT
     # stopsignal=INT  # ``signal SIGQUIT`` can't kill as expect, Use the "fast" shutdown ``signal SIGINT``
     stopsignal=KILL  # ``signal SIGQUIT/SIGINT`` can't kill as expect, Use ``signal SIGKILL``
     stopasgroup=true
