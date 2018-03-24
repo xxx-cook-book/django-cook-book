@@ -167,13 +167,15 @@ autostart=true
 autorestart=true
 startretries=3
 exitcodes=0,1,2
-stopsignal=INT
+stopsignal=KILL
+stopasgroup=true
+killasgroup=true
 stdout_logfile=/home/diors/supervisorlog/supervisor_djangoq_access.log
 stderr_logfile=/home/diors/supervisorlog/supervisor_djangoq_error.log
 user=diors
 ```
 
-* ``stopsignal=QUIT`` can't kill as expect
+* ``stopsignal=QUIT``/``stopsignal=INT`` can't kill as expect
 
 * Django Q stop
 
