@@ -100,7 +100,7 @@
   * WebSocket
     * dwebsocket
     * Node.js — Socket.io
-  * Channals
+  * Channels
   * Push
 * [Requests](Requests/README.md)
 * [Responses](Responses/README.md)
@@ -126,6 +126,7 @@
 * Templates
   * cached.Loader
 * Translations
+  * makemessages/compilemessages
 * [URLs](URLs/README.md)
   * [Pass Extra Params to Views](URLs/pass-extra-params-to-views.md)
   * [Regexes](URLs/regexes.md)

@@ -31,9 +31,9 @@ If you want to ``modify some fields`` or ``run some code`` after click ``Save Bu
     from django.contrib import admin
 
     class ArticleAdmin(admin.ModelAdmin):
-    	def save_model(self, request, obj, form, change):
-        	if ('onshalf' in form.changed_data) and (obj.onshalf == 'on'):
-            	obj.online_at = timezone.now()
+        def save_model(self, request, obj, form, change):
+            if ('onshalf' in form.changed_data) and (obj.onshalf == 'on'):
+                obj.online_at = timezone.now()
     ```
 
     ​

@@ -18,5 +18,5 @@
 
 ## References
 
-[1] bradjasper@Github, [django-jsonfield — A reusable JSONField model for Django to store ad-hoc data](https://github.com/bradjasper/django-jsonfield)
+[1] bradjasper@Github, [django-jsonfield — A reusable JSONField model for Django to store ad-hoc data](https://github.com/dmkoch/django-jsonfield)
 
